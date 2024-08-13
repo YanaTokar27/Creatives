@@ -8,7 +8,6 @@
     width: 100%;
     position: relative;
     background-color: rgb(93, 202, 241);
-    /* margin: 0 auto; */
 }
 
 .bg-img {
@@ -21,32 +20,29 @@
     width: 30%;
     transform: translate(120%, 30%);
     z-index: 3;
-    /* top: 0%; */
-    animation: logoPulse 2s infinite;
-    /* animation: logoUp 1s forwards, logoPulse 2s infinite; */
+    animation: logoUp 1s forwards, logoPulse 3s infinite 1s;
 }
 
 @keyframes logoUp {
     0% {
         top: 40%;
+        transform: translate(120%, 30%) scale(1);
     }
-
     100% {
         top: 0%;
+        transform: translate(120%, 30%) scale(1);
     }
 }
 
 @keyframes logoPulse {
     0% {
-        transform: scale(1), translate(120%, 30%);
+        transform: translate(120%, 30%) scale(1);
     }
-
     50% {
-        transform: scale(1.5), translate(120%, 30%);
+        transform: translate(120%, 30%) scale(1.2);
     }
-
     100% {
-        transform: scale(1), ranslate(120%, 30%);
+        transform: translate(120%, 30%) scale(1);
     }
 }
 
@@ -65,15 +61,9 @@
 
 .cta-container {
     position: absolute;
-    /* bottom: 55px;
-    left: 170px; */
     width: 62%;
-    /* left: 60px;
-    bottom: 65px; */
-    /* transform: translate(20%, 1093%); */
     z-index: 3;
     animation-name: puls;
-    /* animation: pulse_cta 2s steps(2) ease-in-out infinite; */
     left: 83px;
     bottom: 51px;
 }
@@ -93,10 +83,8 @@
 
 .stars-container-left {
     position: absolute;
-    /* width: 110%; */
     width: 120px;
     height: 150px;
-    /* transform: translate(24px, 339px); */
     animation: flyLeft 3s ease-in-out infinite;
     top: 47%;
     left: 21%;
@@ -111,19 +99,17 @@
 
 @keyframes flyLeft {
     0% {
-        transform: translate(50%, 50%); /* Початкова позиція (за межами контейнера) */
+        transform: translate(50%, 50%);
     }
     100% {
-        transform: translate(-58%, -50%); /* Кінцева позиція (видима в центрі контейнера) */
+        transform: translate(-58%, -50%);
     }
 }
 
 .stars-container-right {
     position: absolute;
-    /* width: 110%; */
     width: 120px;
     height: 150px;
-    /* transform: translate(313px, 360px); */
     animation: flyRight 3s ease-in-out infinite;
     top: 55%;
     right: 30%;
@@ -132,10 +118,10 @@
 
 @keyframes flyRight {
     0% {
-        transform: translate(0%, 0%); /* Початкова позиція (за межами контейнера) */
+        transform: translate(0%, 0%);
     }
     100% {
-        transform: translate(110%, -106%); /* Кінцева позиція (видима в центрі контейнера) */
+        transform: translate(110%, -106%);
     }
 }
 
@@ -185,35 +171,33 @@
 
 @keyframes pulse_cta {
     0% {
-        transform: scale(1); /* Початковий розмір */
+        transform: scale(1);
     }
     25% {
         transform: scale(1.1);
     }
     50% {
-        transform: scale(1); /* Збільшення на 20% */
+        transform: scale(1);
     }
     100% {
-        transform: scale(1); /* Повернення до початкового розміру */
+        transform: scale(1);
     }
 }
 
 @keyframes pulse {
     0% {
-        transform: scale(1); /* Початковий розмір */
+        transform: scale(1);
     }
     50% {
-        transform: scale(1.1); /* Збільшення на 20% */
+        transform: scale(1.1);
     }
     100% {
-        transform: scale(1); /* Повернення до початкового розміру */
+        transform: scale(1);
     }
 }
 
 .grass-container {
     position: absolute;
-    /* bottom: 55px;
-    left: 170px; */
     width: 100%;
     transform: translate(0%, 331%);
     z-index: 1;
