@@ -1,114 +1,87 @@
 * {
     box-sizing: border-box;
     padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .container {
-    height: 100%;
-    width: 100%;
     position: relative;
+    width: 100vw;
+    height: 100vh;
     background-color: rgb(93, 202, 241);
+    overflow: hidden;
 }
 
-.bg-img {
+.logo-container,
+.title-container,
+.napkins-container,
+.cta-container {
+    position: relative;
     width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-container {
-    position: absolute;
-    width: 30%;
-    transform: translate(120%, 30%);
-    z-index: 3;
-    animation: logoUp 1s forwards, logoPulse 3s infinite 1s;
+    height: 20%;
+    animation: logoUp 1s forwards, pulse 3s infinite;
+}
+
+.logo {
+    width: 25%;
 }
 
 @keyframes logoUp {
     0% {
         top: 40%;
-        transform: translate(120%, 30%) scale(1);
+        transform: translate(0%, 0%) scale(1);
     }
+
     100% {
         top: 0%;
-        transform: translate(120%, 30%) scale(1);
+        transform: translate(0%, 0%) scale(1);
     }
 }
 
-@keyframes logoPulse {
-    0% {
-        transform: translate(120%, 30%) scale(1);
-    }
-    50% {
-        transform: translate(120%, 30%) scale(1.2);
-    }
-    100% {
-        transform: translate(120%, 30%) scale(1);
-    }
-}
-
-.logo,
-.cta,
-.title,
-.grass,
-.napkins,
-.stars {
-    width: 100%;
+.title-container {
+    height: 18%;
 }
 
 .title {
     position: absolute;
+    height: 100%;
+    object-fit: contain;
+    width: 60%;
 }
 
-.cta-container {
+.left img, .right img {
     position: absolute;
-    width: 62%;
-    z-index: 3;
-    animation-name: puls;
-    left: 83px;
-    bottom: 51px;
 }
 
-.cta {
-    animation: pulse_cta 3s infinite;
-}
-
-.title-container {
-    position: absolute;
-    width: 73%;
-    height: 15%;
-    top: 22%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.stars-container-left {
-    position: absolute;
-    width: 120px;
-    height: 150px;
+.left {
     animation: flyLeft 3s ease-in-out infinite;
-    top: 47%;
-    left: 21%;
-    transform: translate(-50%, 100%);
-}
-
-.stars-container-left img {
-    position: absolute;
-    width: 50px;
+    top: 31%;
+    left: 22%;
 }
 
 @keyframes flyLeft {
     0% {
         transform: translate(50%, 50%);
     }
+
     100% {
         transform: translate(-58%, -50%);
     }
 }
 
-.stars-container-right {
-    position: absolute;
-    width: 120px;
-    height: 150px;
+.right {
     animation: flyRight 3s ease-in-out infinite;
     top: 55%;
     right: 30%;
@@ -119,68 +92,54 @@
     0% {
         transform: translate(0%, 0%);
     }
+
     100% {
         transform: translate(110%, -106%);
     }
 }
 
-.stars-container-right img {
+.stars-container {
     position: absolute;
-    width: 65px;
+    width: 120px;
+    height: 150px;
 }
 
 .star-1 {
-    top: -8px;
-    left: 22px;
+    top: -7%;
+    left: 45%;
+    width: 34%;
 }
 
 .star-2 {
-    left: 23px;
-    top: 84px;
+    left: 18%;
+    top: 8%;
+    width: 50%;
 }
 
 .star-3 {
-    top: 30px;
-    left: 2px;
+    width: 24%;
+    top: 40%;
+    left: 43%;
 }
 
 .star-4 {
-    top: 72px;
-    left: 22px;
+    top: 45%;
+    left: 8%;
+    width: 40%;
 }
-
 .star-5 {
-    top: 33px;
-    left: 8px;
+    width: 46%;
+    top: 22%;
+    left: -12%;
 }
 
 .napkins-container {
-    position: absolute;
-    width: 81%;
-    left: 35px;
-    top: 386px;
-    z-index: 2;
-    animation-name: puls;
-    animation: pulse 2s ease-in-out infinite;
+    height: 50%;
 }
 
 .napkins {
+    width: 68%;
     animation: pulse 2s infinite;
-}
-
-@keyframes pulse_cta {
-    0% {
-        transform: scale(1);
-    }
-    25% {
-        transform: scale(1.1);
-    }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 @keyframes pulse {
@@ -195,15 +154,19 @@
     }
 }
 
-.grass-container {
-    position: absolute;
-    width: 100%;
-    transform: translate(0%, 331%);
-    z-index: 1;
+.cta-container {
+    height: 12%;
 }
 
-body {
-    height: 100vh;
-    margin: 0;
-    width: 100vw;
+.cta {
+    width: 55%;
+    animation: pulse 3s infinite;
+    position: relative;
+    bottom: 10%;
+}
+
+.grass {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
