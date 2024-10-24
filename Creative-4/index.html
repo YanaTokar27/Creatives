@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Слайдер з кнопками по обидві сторони</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="title-container">
+      <img class="logo" src="./Assets/logo_show_1.png">
+      <img class="logo" src="./Assets/logo_show_2.png">
+    </div>
+    <div class="video-container">
+      <video autoplay muted class="video" id="myVideo">
+        <source src="./Assets/video_monday.mp4" type="video/webm" />
+        <source src="./Assets/video_monday.mp4" type="video/mp4" />
+      </video>
+      <img class="sound soundBtn" src="./Assets//sound.png">
+      <img class="mute muteBtn" src="./Assets//mute.png">
+      <img class="skreen" id="screenshot" src="./Assets//screenshot.png" style="display:none;">
+
+      <div class="gallery-container">
+        <div class="slider slider-forward">
+          <img class="slide p-8" src="./Assets/Person8.png">
+          <img class="slide p-7" src="./Assets/Person7.png">
+          <img class="slide" src="./Assets/Person6.png">
+          <img class="slide" src="./Assets/Person5.png">
+          <img class="slide" src="./Assets/Person4.png">
+          <img class="slide p-3" src="./Assets/Person3.png">
+          <img class="slide p-2" src="./Assets/Person2.png">
+          <img class="slide p-1 hidden" src="./Assets/Person1.png">
+        </div>
+      </div>
+    </div>
+    <img class="slide-first" src="./Assets/Person-first.png">
+    <div class="footer-container">
+      <div>
+        <img class="cta-img" src="./Assets/cta_AOD.png">
+      </div>
+      <div>
+        <a href="#">
+          <img class="gold-img" src="./Assets/logo_gold.png">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
