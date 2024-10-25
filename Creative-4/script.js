@@ -22,7 +22,7 @@ setTimeout(() => {
 
     const style = window.getComputedStyle(sliderForward);
     pauseTransformX = parseInt(style.transform.split(',')[4]);
-    console.log(pauseTransformX);
+    // console.log(pauseTransformX);
   });
 
   slider.addEventListener("touchmove", (e) => {
@@ -35,7 +35,7 @@ setTimeout(() => {
   });
 
   slider.addEventListener("touchend", (e) => {
-    console.log(newX);
+    // console.log(newX);
     prevX = newX;
   });
 }, 4000);
@@ -44,7 +44,6 @@ const video = document.getElementById('myVideo');
 const screenshot = document.getElementById('screenshot');
 
 video.addEventListener('ended', function() {
-  // Приховуємо відео
   video.style.display = 'none';
   
   // Відображаємо скріншот
@@ -52,10 +51,8 @@ video.addEventListener('ended', function() {
 });
 
 screenshot.addEventListener('click', function() {
-  // Приховуємо скріншот
   screenshot.style.display = 'none';
   
-  // Показуємо відео і починаємо відтворення
   video.style.display = 'block';
   video.currentTime = 0; // Починаємо від початку
   video.play(); // Запускаємо відтворення
@@ -65,14 +62,14 @@ const muteBtn = document.querySelector('.muteBtn');
 const soundBtn = document.querySelector('.soundBtn');
 
 muteBtn.addEventListener('click', function() {
-  video.muted = false; // Вимикаємо режим mute
-  muteBtn.style.display = 'none'; // Приховуємо кнопку mute
-  soundBtn.style.display = 'block'; // Відображаємо кнопку звук
+  video.muted = false; 
+  muteBtn.style.display = 'none';
+  soundBtn.style.display = 'block';
 });
 
 // Обробник для кнопки Sound
 soundBtn.addEventListener('click', function() {
-  video.muted = true; // Вмикаємо режим mute
-  soundBtn.style.display = 'none'; // Приховуємо кнопку звук
-  muteBtn.style.display = 'block'; // Відображаємо кнопку mute
+  video.muted = true; 
+  soundBtn.style.display = 'none'; 
+  muteBtn.style.display = 'block';
 });
