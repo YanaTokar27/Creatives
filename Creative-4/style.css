@@ -37,14 +37,13 @@
   position: relative;
 }
 
-.skreen {
-  display: none;
+.screen {
   width: 92%;
   margin: 0 4%;
 }
 
-.mute,
-.sound {
+.muteBtn,
+.soundBtn {
   position: absolute;
   top: 10px;
   left: 32px;
@@ -54,10 +53,6 @@
   /* Щоб кнопка була над відео */
   background-color: transparent;
   filter: brightness(0) invert(1);
-}
-
-.sound {
-  display: none;
 }
 
 .gallery-container {
@@ -106,9 +101,15 @@
   animation: first-person 3s linear forwards;
 }
 
+.hidden-woman {
+  display: none;
+}
+
 .hidden {
   display: none;
 }
+
+
 
 .hidden-slider {
   display: none;

@@ -1,75 +1,74 @@
-let pauseTransformX = 0;
-let prevX = 0;
-let newX = 0;
-let startX = 0;
-let endX = 0;
-
 setTimeout(() => {
-  const firstSlide = document.querySelector('.slide-first');
+  const firstSlide = document.querySelector(".slide-first");
   firstSlide.parentElement.removeChild(firstSlide);
 
-  const hidden = document.querySelector('.hidden');
-  hidden.classList.remove('hidden');
+  const hidden = document.querySelector(".hidden-woman");
+  hidden.classList.remove("hidden-woman");
 
-  const sliderForward = document.querySelector('.slider-forward');
-  sliderForward.classList.remove('slider-forward');
-  sliderForward.classList.add('slider-forward-back');
+  const sliderForward = document.querySelector(".slider-forward");
+  sliderForward.classList.remove("slider-forward");
+  sliderForward.classList.add("slider-forward-back");
+
+  let pauseTranslateX = 0;
 
   const slider = document.querySelector(".slider");
+
   slider.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
-    sliderForward.classList.add('pause-animation');
+    sliderForward.classList.add("pause-animation");
 
-    const style = window.getComputedStyle(sliderForward);
-    pauseTransformX = parseInt(style.transform.split(',')[4]);
-    // console.log(pauseTransformX);
+    const computedStyle = window.getComputedStyle(sliderForward);
+    pauseTranslateX = parseInt(computedStyle.transform.split(",")[4]);
   });
 
+  let prevX = 0;
+  let newX = 0;
+
   slider.addEventListener("touchmove", (e) => {
-    endX = e.touches[0].clientX;
+    const endX = e.touches[0].clientX;
     const diffX = endX - startX;
     newX = prevX + diffX;
-    newX = Math.min(newX, -pauseTransformX);  // left
-    newX = Math.max(newX, -1000 - pauseTransformX); // right
+    newX = Math.min(newX, -pauseTranslateX); // left
+    const minAnimationTranslateX = -1000;
+    newX = Math.max(newX, minAnimationTranslateX - pauseTranslateX); // right
     slider.style.translate = `${newX}px 0px`;
   });
 
   slider.addEventListener("touchend", (e) => {
-    // console.log(newX);
     prevX = newX;
   });
 }, 4000);
 
-const video = document.getElementById('myVideo');
-const screenshot = document.getElementById('screenshot');
+const video = document.getElementById("myVideo");
+const screenshot = document.getElementById("screenshot");
 
-video.addEventListener('ended', function() {
-  video.style.display = 'none';
-  
+video.addEventListener("ended", function () {
+  video.classList.add("hidden");
+
   // Відображаємо скріншот
-  screenshot.style.display = 'block';
+  screenshot.classList.remove("hidden");
 });
 
-screenshot.addEventListener('click', function() {
-  screenshot.style.display = 'none';
-  
-  video.style.display = 'block';
+screenshot.addEventListener("click", function () {
+  screenshot.classList.add("hidden");
+
+  video.classList.remove("hidden");
   video.currentTime = 0; // Починаємо від початку
   video.play(); // Запускаємо відтворення
 });
 
-const muteBtn = document.querySelector('.muteBtn');
-const soundBtn = document.querySelector('.soundBtn');
+const muteBtn = document.querySelector(".muteBtn");
+const soundBtn = document.querySelector(".soundBtn");
 
-muteBtn.addEventListener('click', function() {
-  video.muted = false; 
-  muteBtn.style.display = 'none';
-  soundBtn.style.display = 'block';
+muteBtn.addEventListener("click", function () {
+  video.muted = false;
+  muteBtn.classList.add("hidden");
+  soundBtn.classList.remove("hidden");
 });
 
 // Обробник для кнопки Sound
-soundBtn.addEventListener('click', function() {
-  video.muted = true; 
-  soundBtn.style.display = 'none'; 
-  muteBtn.style.display = 'block';
+soundBtn.addEventListener("click", function () {
+  video.muted = true;
+  soundBtn.classList.add("hidden");
+  muteBtn.classList.remove("hidden");
 });
