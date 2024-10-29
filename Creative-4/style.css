@@ -42,8 +42,7 @@
   margin: 0 4%;
 }
 
-.muteBtn,
-.soundBtn {
+.mute-btn {
   position: absolute;
   top: 10px;
   left: 32px;
@@ -108,8 +107,6 @@
 .hidden {
   display: none;
 }
-
-
 
 .hidden-slider {
   display: none;
