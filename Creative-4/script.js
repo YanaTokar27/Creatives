@@ -1,4 +1,5 @@
 const firstSlide = document.querySelector(".slide-first");
+
 firstSlide.addEventListener("animationend", (event) => {
   const delayAfterAnimation = 500;
   setTimeout(() => {
@@ -61,13 +62,16 @@ screenshot.addEventListener("click", function () {
 });
 
 const muteBtn = document.querySelector(".mute-btn");
+const soundBtn = document.querySelector(".sound-btn");
 
-muteBtn.addEventListener("click", function () {
-  if (video.muted) {
-    video.muted = false;
-    muteBtn.src = "./Assets/sound.png";
-  } else {
-    video.muted = true;
-    muteBtn.src = "./Assets/mute.png";
-  }
+muteBtn.addEventListener("click", () => {
+  video.muted = false;
+  muteBtn.classList.add("hidden");
+  soundBtn.classList.remove("hidden");
+});
+
+soundBtn.addEventListener("click", () => {
+  video.muted = true;
+  soundBtn.classList.add("hidden");
+  muteBtn.classList.remove("hidden");
 });

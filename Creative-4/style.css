@@ -42,14 +42,13 @@
   margin: 0 4%;
 }
 
-.mute-btn {
+.mute-btn, .sound-btn {
   position: absolute;
   top: 10px;
   left: 32px;
   width: 40px;
   cursor: pointer;
   z-index: 1;
-  /* Щоб кнопка була над відео */
   background-color: transparent;
   filter: brightness(0) invert(1);
 }
@@ -105,10 +104,6 @@
 }
 
 .hidden {
-  display: none;
-}
-
-.hidden-slider {
   display: none;
 }
 
@@ -181,14 +176,13 @@
   }
 
   100% {
-    transform: scale(0.34) translateY(3%) translateX(420px);
+    transform: scale(0.34) translateY(3%) translateX(93vw);
   }
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
-  position: relative;
   margin: 4px;
   align-items: center;
   position: absolute;
