@@ -82,14 +82,16 @@
 
 .cup {
     z-index: 9;
-    top: 0%;
-    left: 0%;
+    top: 2%;
+    left: 17%;
+    width: 65%;
+    height: 72%;
 }
 
 .pan {
     z-index: 8;
     top: 12%;
-    left: 14%;
+    left: 17%;
     width: 65%;
     height: 72%;
 }
@@ -99,7 +101,7 @@
     top: 1%;
     left: 40%;
     width: 22%;
-    height: 85%;
+    height: 80%;
 }
 
 .choppingBoard {
