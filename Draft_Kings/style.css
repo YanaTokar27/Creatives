@@ -6,8 +6,8 @@
 
 .container {
     background: url(./Assets/footer_m.png) no-repeat bottom,
-                url(./Assets/bgd.jpg);
-    background-size: auto 39%;
+        url(./Assets/bgd.jpg);
+    background-size: auto 46%;
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -63,35 +63,35 @@
 }
 
 .box-left {
-    left: -48%;
+    left: 10%;
     animation: moveLeftToCenter 1s ease-in-out forwards;
 }
 
 .box-right {
-    right: -48%;
+    right: 11%;
     animation: moveRightToCenter 1s ease-in-out forwards;
 }
 
 @keyframes moveLeftToCenter {
     0% {
-        transform: translateX(20vw);
+        transform: translateX(-60%);
         opacity: 0;
     }
 
     100% {
-        transform: translateX(calc(50vw - 50px));
+        transform: translateX(0);
         opacity: 1;
     }
 }
 
 @keyframes moveRightToCenter {
     0% {
-        transform: translateX(-20vw);
+        transform: translateX(60%);
         opacity: 0;
     }
 
     100% {
-        transform: translateX(calc(-50vw + 50px));
+        transform: translateX(0);
         opacity: 1;
     }
 }
@@ -138,39 +138,43 @@
     opacity: 0;
 }
 
-.title.animate {
-    display: block;
-    animation: titleMoveToCenter 0.5s ease-in-out forwards;
-}
-
 .title-1 {
     margin-left: -5%;
     width: 57%;
     animation-delay: 0.5s;
+    animation: titleMoveToCenter 0.5s ease-in-out forwards;
 }
 
 .title-2 {
     width: 57%;
     animation-delay: 1s;
+    animation: titleMoveToCenter 0.5s ease-in-out forwards;
+    animation-delay: 0.1s;
 }
 
 .title-3 {
     width: 78%;
     animation-delay: 1.2s;
+    animation: titleMoveToCenter 0.5s ease-in-out forwards;
+    animation-delay: 0.2s;
 }
 
 .title-4 {
     width: 56%;
     animation-delay: 1.4s;
+    animation: titleMoveToCenter 0.5s ease-in-out forwards;
+    animation-delay: 0.3s;
 }
 
 .title-5 {
     width: 42%;
+    animation: titleMoveToCenter 0.5s ease-in-out forwards;
+    animation-delay: 0.4s;
 }
 
 @keyframes titleMoveToCenter {
     0% {
-        transform: translateX(-13vw);
+        transform: translateX(-10%);
         opacity: 0;
     }
 
@@ -179,7 +183,7 @@
     }
 
     100% {
-        transform: translateX(calc(-13vw + 50px));
+        transform: translateX(0);
         opacity: 1;
     }
 }
@@ -190,11 +194,9 @@
     margin-top: 10%;
     position: relative;
     left: 5%;
-    animation: changeOpasity 1s ease-in-out forwards;
-}
-
-.pulse {
+    opacity: 0;
     animation: pulseAnimation 1s infinite;
+    animation-delay: 0.5s;
 }
 
 @keyframes changeOpasity {
@@ -213,14 +215,17 @@
 
 @keyframes pulseAnimation {
     0% {
+        opacity: 1;
         transform: scale(1);
     }
 
     50% {
+        opacity: 1;
         transform: scale(1.1);
     }
 
     100% {
+        opacity: 1;
         transform: scale(1);
     }
 }
@@ -246,7 +251,6 @@
 .cta-txt2 {
     margin-right: 3%;
     animation: changeOpasity 1.5s ease-in-out forwards;
-
 }
 
 .ball-container {
@@ -254,18 +258,17 @@
     height: 51%;
     position: absolute;
     bottom: -4%;
-    left: 26%;
+    left: 35%;
     top: 59%;
 }
 
 .ball {
     position: absolute;
     z-index: 2;
-    width: 116%;
-}
-
-.flyIn {
-    animation: flyIn 1s ease-out forwards;
+    width: 100%;
+    opacity: 0;
+    animation: flyIn 2s ease-out forwards;
+    animation-delay: 0.8s;
 }
 
 @keyframes flyIn {
@@ -274,13 +277,16 @@
         transform-origin: left;
         opacity: 0.2;
     }
+
     35% {
         transform: rotate(-15deg);
     }
+
     50% {
-        transform:  translate(0, 0) rotate(0deg);
+        transform: translate(0, 0) rotate(0);
         opacity: 0.8;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -304,7 +310,7 @@
 
 .legal {
     width: 93%;
-    margin-top: 16%;
+    margin-top: 11%;
     animation: jumpUp 1s ease-out forwards;
 }
 
@@ -315,7 +321,7 @@
     }
 
     100% {
-        transform: translateY(0%);
+        transform: translateY(0);
         opacity: 1;
     }
 }
