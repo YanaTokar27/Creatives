@@ -5,9 +5,7 @@
 }
 
 .container {
-    background: url(./Assets/footer_m.png) no-repeat bottom,
-        url(./Assets/bgd.jpg);
-    background-size: auto 46%;
+    background: url(./Assets/bgd.jpg);
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -62,12 +60,12 @@
     position: absolute;
 }
 
-.box-left {
+.start-animation .box-left {
     left: 10%;
     animation: moveLeftToCenter 1s ease-in-out forwards;
 }
 
-.box-right {
+.start-animation .box-right {
     right: 11%;
     animation: moveRightToCenter 1s ease-in-out forwards;
 }
@@ -96,7 +94,7 @@
     }
 }
 
-.logo-info {
+.start-animation .logo-info {
     animation-delay: 50s;
     animation: fadeIn 1s ease-in forwards;
     display: flex;
@@ -120,7 +118,7 @@
 .cta-container {
     position: absolute;
     top: 21%;
-    height: 61%;
+    height: 45%;
     width: 100vw;
 }
 
@@ -138,35 +136,35 @@
     opacity: 0;
 }
 
-.title-1 {
+.start-animation .title-1 {
     margin-left: -5%;
     width: 57%;
     animation-delay: 0.5s;
     animation: titleMoveToCenter 0.5s ease-in-out forwards;
 }
 
-.title-2 {
+.start-animation .title-2 {
     width: 57%;
     animation-delay: 1s;
     animation: titleMoveToCenter 0.5s ease-in-out forwards;
     animation-delay: 0.1s;
 }
 
-.title-3 {
+.start-animation .title-3 {
     width: 78%;
     animation-delay: 1.2s;
     animation: titleMoveToCenter 0.5s ease-in-out forwards;
     animation-delay: 0.2s;
 }
 
-.title-4 {
+.start-animation .title-4 {
     width: 56%;
     animation-delay: 1.4s;
     animation: titleMoveToCenter 0.5s ease-in-out forwards;
     animation-delay: 0.3s;
 }
 
-.title-5 {
+.start-animation .title-5 {
     width: 42%;
     animation: titleMoveToCenter 0.5s ease-in-out forwards;
     animation-delay: 0.4s;
@@ -188,29 +186,15 @@
     }
 }
 
-.bet-now {
-    width: 30%;
+.start-animation .bet-now {
+    width: 34%;
     height: 8%;
     margin-top: 10%;
     position: relative;
-    left: 5%;
+    left: 7%;
     opacity: 0;
     animation: pulseAnimation 1s infinite;
     animation-delay: 0.5s;
-}
-
-@keyframes changeOpasity {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 @keyframes pulseAnimation {
@@ -230,25 +214,52 @@
     }
 }
 
+@keyframes changeOpasity {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .orange {
     width: 80%;
 }
 
 .text {
-    left: 2%;
+    left: 3%;
     position: absolute;
-    top: 18%;
+    top: 20%;
     display: flex;
-    height: 54%;
+    height: 84%;
 }
 
-.cta-txt1 {
+.start-animation .cta-txt1 {
     margin-right: 3%;
     animation: changeOpasity 0.5s ease-in-out forwards;
-
 }
 
-.cta-txt2 {
+@keyframes changeOpasity {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} 
+
+.start-animation .cta-txt2 {
     margin-right: 3%;
     animation: changeOpasity 1.5s ease-in-out forwards;
 }
@@ -259,10 +270,10 @@
     position: absolute;
     bottom: -4%;
     left: 35%;
-    top: 59%;
+    top: 81%;
 }
 
-.ball {
+.start-animation .ball {
     position: absolute;
     z-index: 2;
     width: 100%;
@@ -293,9 +304,27 @@
     }
 }
 
-.info-container {
-    top: 74%;
-    height: 23%;
+.start-animation .info-container {
+    background: url(./Assets/footer_m.png) no-repeat;
+    /* background-position: 0%; */
+    background-size: 100% 100%;
+    top: 58%;
+    height: 42%;
+    /* z-index: 2; */
+    animation: jumpUpFooter 1s ease-out forwards;
+}
+
+
+@keyframes jumpUpFooter {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .footer-text {
@@ -308,9 +337,9 @@
     align-items: center;
 }
 
-.legal {
+.start-animation .legal {
     width: 93%;
-    margin-top: 11%;
+    margin-top: 28%;
     animation: jumpUp 1s ease-out forwards;
 }
 
