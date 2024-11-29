@@ -62,58 +62,53 @@
 
 .start-animation .box-left {
     left: 10%;
-    animation: moveLeftToCenter 1s ease-in-out forwards;
+    animation: changeOpasity 1s ease-in forwards, moveLeftToCenter 1s ease-in-out forwards;
 }
 
 .start-animation .box-right {
     right: 11%;
-    animation: moveRightToCenter 1s ease-in-out forwards;
+    animation: changeOpasity 1s ease-in forwards, moveRightToCenter 1s ease-in-out forwards;
 }
 
 @keyframes moveLeftToCenter {
     0% {
         transform: translateX(-60%);
-        opacity: 0;
     }
 
     100% {
         transform: translateX(0);
-        opacity: 1;
     }
 }
 
 @keyframes moveRightToCenter {
     0% {
         transform: translateX(60%);
-        opacity: 0;
     }
 
     100% {
         transform: translateX(0);
-        opacity: 1;
     }
 }
 
 .start-animation .logo-info {
     display: flex;
     justify-content: center;
-    animation: fadeIn 1s ease-in forwards;
+    opacity: 0;
+    animation: changeOpasity 1s ease-in 0.5s forwards;
 }
 
-@keyframes fadeIn {
+@keyframes changeOpasity {
     0% {
         opacity: 0;
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
 .logo-tagline {
     width: 54%;
-
 }
 
 .cta-container {
@@ -135,7 +130,7 @@
 
 .title {
     opacity: 0;
-    animation: titleMoveToCenter 0.5s ease-in-out forwards;
+    animation: changeOpasity 1s ease-in 0.5s forwards, titleMoveToCenter 0.5s ease-in-out forwards;
 }
 
 .title-1 {
@@ -167,16 +162,10 @@
 @keyframes titleMoveToCenter {
     0% {
         transform: translateX(-10%);
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.5;
     }
 
     100% {
         transform: translateX(0);
-        opacity: 1;
     }
 }
 
@@ -187,37 +176,20 @@
     position: relative;
     left: 7%;
     opacity: 0;
-    animation: pulseAnimation 1s infinite 1.4s;
+    animation: changeOpasity 1s ease-in 1.5s forwards, pulseAnimation 1s linear 2.3s infinite;
 }
 
 @keyframes pulseAnimation {
     0% {
-        opacity: 1;
         transform: scale(1);
     }
 
     50% {
-        opacity: 1;
         transform: scale(1.1);
     }
 
     100% {
-        opacity: 1;
         transform: scale(1);
-    }
-}
-
-@keyframes changeOpasity {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
     }
 }
 
@@ -238,20 +210,6 @@
     animation: changeOpasity 0.5s ease-in-out forwards;
 }
 
-@keyframes changeOpasity {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
-} 
-
 .start-animation .cta-txt2 {
     margin-right: 3%;
     animation: changeOpasity 1.5s ease-in-out forwards;
@@ -271,24 +229,21 @@
     z-index: 2;
     width: 100%;
     opacity: 0;
-    animation: flyIn 2s ease-out 1.2s forwards;
+    animation: changeOpasity 1s ease-in 1.5s forwards, flyIn 2s ease-out 1.5s forwards;
 }
 
 @keyframes flyIn {
     0% {
         transform: translate(200%, 100%) scale(1.5) rotate(135deg);
         transform-origin: left;
-        opacity: 0.2;
     }
 
     50% {
         transform: translate(0, 0) rotate(0);
-        opacity: 0.8;
     }
 
     100% {
         transform: scale(1);
-        opacity: 1;
     }
 }
 
@@ -297,19 +252,16 @@
     background-size: 100% 100%;
     top: 58%;
     height: 42%;
-    animation: jumpUpFooter 1s ease-out forwards;
+    animation: changeOpasity 1s ease-in forwards, jumpUpFooter 1s ease-out forwards;
 }
-
 
 @keyframes jumpUpFooter {
     0% {
         transform: translateY(20%);
-        opacity: 0;
     }
 
     100% {
         transform: translateY(0);
-        opacity: 1;
     }
 }
 
@@ -326,6 +278,14 @@
 .start-animation .legal {
     width: 93%;
     margin-top: 28%;
-    transform: translateY(100%);
-    animation: fadeIn 1s ease-out forwards;
+    animation: changeOpasity 1s ease-in forwards, jumpUp 1s ease-out forwards;
+}
+
+@keyframes jumpUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
