@@ -1,0 +1,435 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background: url(./Assets/bg.png) no-repeat;
+    background-position: bottom;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.video-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.video,
+.screen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mute-btn,
+.sound-btn {
+    position: absolute;
+    width: 8%;
+    height: 4%;
+    top: 3%;
+    left: 5%;
+}
+
+.hidden {
+    display: none;
+}
+
+.slider-container {
+    top: 26%;
+    flex: 1;
+}
+
+.title {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.food-liquids {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 3%;
+    position: relative;
+}
+
+.cloud {
+    position: absolute;
+}
+
+.start-animation .cloud-1 {
+    width: 35%;
+    height: 65%;
+    top: -8%;
+    left: -38%;
+    animation: cloud1 18s linear 1s infinite;
+}
+
+@keyframes cloud1 {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(450%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.start-animation .cloud-2 {
+    width: 22%;
+    height: 48%;
+    top: 56%;
+    right: -26%;
+    animation: cloud2 18s linear 1s infinite;
+
+}
+
+@keyframes cloud2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-600%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.start-animation .title-food {
+    width: 46%;
+    opacity: 0;
+    animation: changeScale 1s linear forwards;
+}
+
+.start-animation .title-liquids {
+    width: 62%;
+    z-index: 1;
+    opacity: 0;
+    animation: changeScale 1s linear 0.7s forwards;
+}
+
+@keyframes changeScale {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.start-animation .check-items {
+    background-color: white;
+    border-radius: 20px;
+    height: 16%;
+    width: 76%;
+    margin-top: 4%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: moveUp 1s linear 1.1s forwards;
+}
+
+.check-item {
+    width: 29%;
+    margin: 0 1%;
+    height: 40%;
+    position: relative;
+    opacity: 0;
+}
+
+.check-item-1 {
+    animation: changeOpacity 1s linear 1.3s forwards;
+}
+
+.check-item-2 {
+    animation: changeOpacity 1s linear 1.6s forwards;
+}
+
+.check-item-3 {
+    animation: changeOpacity 1s linear 1.8s forwards;
+}
+
+@keyframes changeOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.tick {
+    width: 8%;
+    position: absolute;
+    height: 58%;
+    top: 11%;
+}
+
+.tick-1 {
+    left: 6%;
+}
+
+.tick-2 {
+    left: 37%;
+}
+
+.tick-3 {
+    left: 68%;
+}
+
+.start-animation .swipe {
+    background-color: rgb(210, 82, 101);
+    border-radius: 20px;
+    height: 31%;
+    width: 68%;
+    margin-top: 4%;
+    position: relative;
+    opacity: 0;
+    animation: moveUp 1s linear 1.3s forwards;
+}
+
+.start-animation .arrows {
+    position: absolute;
+    width: 9%;
+    top: 29%;
+    left: 5%;
+    z-index: 1;
+    opacity: 0;
+    animation: moveLeft 1s linear 1.3s forwards;
+}
+
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(200%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.start-animation .swipe-text {
+    position: absolute;
+    width: 80%;
+    top: 21%;
+    left: 16%;
+    z-index: 1;
+    height: 62%;
+    opacity: 0;
+    animation: changeOpacity 1s linear 2.1s forwards;
+}
+
+.animation {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    left: 12%;
+    top: 2%;
+}
+
+.bin,
+.mouth,
+.left-hand,
+.right-hand,
+.banana-blink,
+.coffee-blink {
+    position: absolute;
+}
+
+.bin {
+    left: 9%;
+    height: 108%;
+    width: 58%;
+    z-index: 2;
+    top: 6%;
+}
+
+.start-animation .mouth {
+    left: 32%;
+    height: 10%;
+    top: 32%;
+    width: 13%;
+    z-index: 2;
+    animation: moveMouth 2s infinite ease-in-out;
+}
+
+@keyframes moveMouth {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-9deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    75% {
+        transform: rotate(9deg);
+    }
+}
+
+.start-animation .hand {
+    height: 24%;
+    width: 22%;
+    top: 47%;
+    animation: hand 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards infinite alternate;
+}
+
+.right-hand {
+    left: 59%
+}
+
+.left-hand {
+    left: -6%;
+}
+
+@keyframes hand {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+.start-animation .coffee-blink {
+    left: -3%;
+    height: 38%;
+    top: 6%;
+    width: 23%;
+    animation: moveCoffeBanana 2s linear infinite;
+}
+
+.banana-blink {
+    right: 16%;
+    height: 40%;
+    top: -1%;
+    width: 36%;
+}
+
+.delay {
+    animation-delay: 1.5s
+}
+
+.start-animation .coffee-closed {
+    opacity: 0;
+    animation: 3s closed-blink 1.5s infinite, moveCoffeBanana 2s linear infinite;
+}
+
+.start-animation .coffee-open {
+    opacity: 1;
+    animation: 3s open-blink 1.5s infinite, moveCoffeBanana 2s linear infinite;
+}
+
+.start-animation .banana-closed {
+    opacity: 0;
+    animation: closed-blink 3s infinite, moveCoffeBanana 2s linear infinite;
+}
+
+.start-animation .banana-open {
+    opacity: 1;
+    animation: open-blink 3s infinite, moveCoffeBanana 2s linear infinite;
+}
+
+@keyframes open-blink {
+    0%,
+    95% {
+        opacity: 1;
+    }
+    96% {
+        opacity: 0;
+    }
+}
+
+@keyframes closed-blink {
+
+    0%,
+    95% {
+        opacity: 0;
+    }
+
+    96% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveCoffeBanana {
+    50% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(5%);
+    }
+
+    50% {
+        transform: translateY(10%);
+    }
+
+    75% {
+        transform: translateY(5%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.cta-container {
+    width: 100vw;
+    height: 11%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.cta {
+    width: 100%;
+    flex: 1.1;
+}
+
+.logo {
+    width: 100%;
+}
