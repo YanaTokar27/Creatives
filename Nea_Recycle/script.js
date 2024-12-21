@@ -1,18 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const appContainer = document.querySelector(".container");
   appContainer.classList.add("start-animation");
-  });
+});
 
 const video = document.getElementById("myVideo");
 const screenshot = document.getElementById("screenshot");
 
-video.addEventListener("ended", function () {
+video.addEventListener("ended", () => {
   video.classList.add("hidden");
-
   screenshot.classList.remove("hidden");
 });
 
-screenshot.addEventListener("click", function () {
+screenshot.addEventListener("click", () => {
   screenshot.classList.add("hidden");
 
   video.classList.remove("hidden");
@@ -20,17 +19,10 @@ screenshot.addEventListener("click", function () {
   video.play();
 });
 
-const muteBtn = document.querySelector(".mute-btn");
-const soundBtn = document.querySelector(".sound-btn");
+const btn = document.querySelector(".btn");
 
-muteBtn.addEventListener("click", () => {
-  video.muted = false;
-  muteBtn.classList.add("hidden");
-  soundBtn.classList.remove("hidden");
-});
-
-soundBtn.addEventListener("click", () => {
-  video.muted = true;
-  soundBtn.classList.add("hidden");
-  muteBtn.classList.remove("hidden");
+btn.addEventListener("click", () => {
+  video.muted = !video.muted;
+  btn.classList.toggle("mute-btn");
+  btn.classList.toggle("sound-btn");
 });
