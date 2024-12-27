@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.img {
+    width: 200px;
+    height: 170px;
+}
+
+.hidden {
+    display: none;
+}
+
+.wrapper {
+    display: flex;
+    border: 5px solid rgb(1, 87, 14);
+    width: 340px;
+    height: 220px;
+    background-color: #9ef5a5;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px auto;
+}
