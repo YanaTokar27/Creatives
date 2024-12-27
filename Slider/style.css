@@ -1,0 +1,40 @@
+.container {
+    max-width: 80%;
+    min-width: 360px;
+    margin: 20px;
+    text-align: center;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* #next.trans{
+opacity: 0;
+} */
+
+button[disabled] {
+opacity: 0;
+}
+
+.size-button {
+    padding: 15px;
+}
+
+.wrapper {
+    display: flex;
+    border: 5px solid rgb(1, 87, 14);
+    width: 400px;
+    height: 260px;
+    background-color: #9ef5a5;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px auto;
+}
+
