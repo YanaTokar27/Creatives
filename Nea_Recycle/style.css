@@ -35,14 +35,11 @@
     left: 5%;
     border: none;
     background-color: transparent;
+    background-image: url(./Assets/mute.png);
 }
 
 .sound-btn {
     background-image: url(./Assets/sound.png);
-}
-
-.mute-btn {
-    background-image: url(./Assets/mute.png);
 }
 
 .hidden {

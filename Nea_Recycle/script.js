@@ -23,6 +23,5 @@ const btn = document.querySelector(".btn");
 
 btn.addEventListener("click", () => {
   video.muted = !video.muted;
-  btn.classList.toggle("mute-btn");
   btn.classList.toggle("sound-btn");
 });
