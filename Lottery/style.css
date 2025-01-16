@@ -5,11 +5,10 @@
 }
 
 .container {
-    background: url(./Assets/bg.png) no-repeat;
+    background-color: rgb(155, 7, 10);
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    /* overflow: hidden; */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -52,13 +51,13 @@
     width: 57%;
     margin-bottom: 7%;
     opacity: 0;
-    animation: opacity 1s ease-in 1.7s forwards;
+    animation: changeOpacity 1s ease-in 1.7s forwards;
 }
 
 .start-animation .title-2 {
     opacity: 0;
     width: 60%;
-    animation: opacity 1s ease-in 3s forwards;
+    animation: changeOpacity 1s ease-in 3s forwards;
 }
 
 .lottery-container {
@@ -77,7 +76,7 @@
     height: 51%;
     opacity: 0;
     top: 19%;
-    animation: up 0.5s ease-in 0.5s forwards, opacity 0.5s ease-in 0.5s forwards;
+    animation: upImg 0.5s ease-in 0.5s forwards, changeOpacity 0.5s ease-in 0.5s forwards;
 }
 
 .start-animation .envelope {
@@ -87,10 +86,10 @@
     width: 82%;
     bottom: 9%;
     height: 46%;
-    animation: up 0.5s ease-in 0.5s forwards, opacity 0.5s ease-in 0.5s forwards;
+    animation: upImg 0.5s ease-in 0.5s forwards, changeOpacity 0.5s ease-in 0.5s forwards;
 }
 
-@keyframes up {
+@keyframes upImg {
     0% {
         transform: translateY(100%);
     }
@@ -100,7 +99,7 @@
     }
 }
 
-@keyframes opacity {
+@keyframes changeOpacity {
     0% {
         opacity: 0;
     }
@@ -110,12 +109,7 @@
     }
 }
 
-.card-1,
-.card-2,
-.card-3,
-.card-4,
-.card-5,
-.card-6 {
+.card {
     position: absolute;
     z-index: 1;
     opacity: 0;
@@ -126,7 +120,7 @@
     left: 27%;
     width: 48%;
     top: 46%;
-    animation: upCard 0.5s ease-in 1s forwards, opacity 0.5s ease-in 1s forwards,
+    animation: upCard 0.5s ease-in 1s forwards, changeOpacity 0.5s ease-in 1s forwards,
         upDownCard 4s linear 4.7s infinite;
 }
 
@@ -135,7 +129,7 @@
     left: 10%;
     width: 46%;
     top: 30%;
-    animation: upCard 0.5s ease-in 1.5s forwards, opacity 0.5s ease-in 1.5s forwards,
+    animation: upCard 0.5s ease-in 1.5s forwards, changeOpacity 0.5s ease-in 1.5s forwards,
         upDownCard 4s linear 5.2s infinite;
 }
 
@@ -144,7 +138,7 @@
     right: 9%;
     width: 43%;
     top: 30%;
-    animation: upCard 0.5s ease-in 2s forwards, opacity 0.5s ease-in 2s forwards,
+    animation: upCard 0.5s ease-in 2s forwards, changeOpacity 0.5s ease-in 2s forwards,
         upDownCard 4s linear 5.7s infinite;
 }
 
@@ -153,7 +147,7 @@
     right: 30%;
     width: 34%;
     top: 8%;
-    animation: upCard 0.5s ease-in 2.8s forwards, opacity 0.5s ease-in 2.8s forwards,
+    animation: upCard 0.5s ease-in 2.8s forwards, changeOpacity 0.5s ease-in 2.8s forwards,
         upDownCard 4s linear 6.2s infinite;
 }
 
@@ -162,7 +156,7 @@
     right: 7%;
     width: 33%;
     top: 18%;
-    animation: upCard 0.5s linear 3.5s forwards, opacity 0.5s ease-in 3.5s forwards,
+    animation: upCard 0.5s linear 3.5s forwards, changeOpacity 0.5s ease-in 3.5s forwards,
         upDownCard 4s ease-in 6.7s infinite;
 }
 
@@ -171,7 +165,7 @@
     left: 12%;
     width: 35%;
     top: 18%;
-    animation: upCard 0.5s linear 4s forwards, opacity 0.5s ease-in 4s forwards,
+    animation: upCard 0.5s linear 4s forwards, changeOpacity 0.5s ease-in 4s forwards,
         upDownCard 4s ease-in 7.2s infinite;
 }
 
@@ -186,20 +180,12 @@
 }
 
 @keyframes upDownCard {
-    0% {
+    0%, 10%, 100% {
         transform: translateY(0);
     }
 
     5% {
         transform: translateY(-10%);
-    }
-
-    10% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(0);
     }
 }
 
@@ -221,16 +207,12 @@
 }
 
 @keyframes scaleCta {
-    0% {
+    0%, 100% {
         transform: scale(1);
     }
 
     50% {
         transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
     }
 }
 
@@ -282,15 +264,15 @@
         top: 47%;
     }
 
-    .start-animation .card-2 {
+    .start-animation .card-2 .card-3{
         top: 30%;
         right: 10%;
     }
 
-    .start-animation .card-3 {
+    /* .start-animation .card-3 {
         top: 30%;
         right: 10%;
-    }
+    } */
 
     .start-animation .card-4 {
         top: 6%;
