@@ -1,3 +1,7 @@
+iframe {
+    display: none;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,12 +15,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 .tree {
-    background: url(./Assets/Tree_boarder.png) no-repeat;
+    background-image: url('https://i.loopme.me/html/Two_Tango_Holiday/assets/images/Tree_boarder.png');
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     position: absolute;
     width: 100%;
@@ -62,7 +66,8 @@
 .lottery-container {
     height: 64%;
     width: 100%;
-    position: relative;
+    position: absolute;
+    bottom: 0%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,7 +76,8 @@
 
 .start-animation .top-envelope {
     position: absolute;
-    width: 79%;
+    width: 98%;
+    left: 0%;
     height: 51%;
     opacity: 0;
     top: 19%;
@@ -170,7 +176,7 @@
 
 @keyframes upCard {
     0% {
-        transform: translateY(45%);
+        transform: translateY(35%);
     }
 
     100% {
@@ -179,7 +185,10 @@
 }
 
 @keyframes upDownCard {
-    0%, 10%, 100% {
+
+    0%,
+    10%,
+    100% {
         transform: translateY(0);
     }
 
@@ -206,7 +215,9 @@
 }
 
 @keyframes scaleCta {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
 
@@ -241,7 +252,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 620px) {
     .lottery-container {
         width: 83%;
     }
@@ -260,18 +271,20 @@
     }
 
     .start-animation .card-1 {
-        top: 47%;
+        top: 44%;
+        height: 34%;
     }
 
-    .start-animation .card-2 .card-3{
-        top: 30%;
+    .start-animation .card-2 {
+        width: 46%;
+        top: 26%;
         right: 10%;
     }
 
-    /* .start-animation .card-3 {
-        top: 30%;
+    .start-animation .card-3 {
+        top: 27%;
         right: 10%;
-    } */
+    }
 
     .start-animation .card-4 {
         top: 6%;
@@ -282,13 +295,13 @@
     .start-animation .card-5 {
         right: 9%;
         width: 30%;
-        top: 19%;
+        top: 16%;
     }
 
     .start-animation .card-6 {
         left: 11%;
         width: 34%;
-        top: 18%;
+        top: 13%;
     }
 
     .start-animation .cta {
