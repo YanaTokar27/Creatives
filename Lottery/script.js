@@ -12,13 +12,13 @@ for (let i = 0; i < numberOfSnowflakes; i++) {
 
   const MIN_SIZE = 0.3;
   const MAX_SIZE = 2;
-  const MIN_DURATION = 10;
-  const MAX_DURATION = 3;
-  const DELAY = 10;
   // Випадкове розташування та тривалість (random - діапазон [0 до 1])
   const size = Math.random() * MAX_SIZE + MIN_SIZE; // Розмір від 0.3 до 2.3
   const leftPosition = Math.random() * 100; // Випадкове розташування
+  const MIN_DURATION = 10;
+  const MAX_DURATION = 3;
   const animationDuration = Math.random() * MAX_DURATION + MIN_DURATION; // Тривалість від 10 до 13 секунд
+  const DELAY = 10;
   const animationDelay = Math.random() * DELAY; // Затримка до 10 секунд
 
   // Додаємо стилі для кожної сніжинки
