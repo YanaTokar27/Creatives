@@ -36,8 +36,8 @@ iframe {
 }
 
 .logo {
-    height: 62%;
-    width: 24%;
+    /* height: 62%; */
+    width: 23%;
     z-index: 1;
 }
 
@@ -80,7 +80,7 @@ iframe {
     left: 0%;
     height: 51%;
     opacity: 0;
-    top: 19%;
+    top: 16%;
     animation: upImg 0.5s ease-in 0.5s forwards, changeOpacity 0.5s ease-in 0.5s forwards;
 }
 
@@ -90,7 +90,7 @@ iframe {
     opacity: 0;
     width: 82%;
     bottom: 9%;
-    height: 46%;
+    height: 48%;
     animation: upImg 0.5s ease-in 0.5s forwards, changeOpacity 0.5s ease-in 0.5s forwards;
 }
 
@@ -205,8 +205,8 @@ iframe {
 
 .start-animation .cta {
     position: absolute;
-    bottom: 13%;
-    width: 45%;
+    bottom: 11%;
+    width: 37%;
     height: 10%;
     background: none;
     border: none;
@@ -222,7 +222,7 @@ iframe {
     }
 
     50% {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
 
@@ -258,7 +258,7 @@ iframe {
     }
 
     .logo {
-        width: 16%;
+        width: 17%;
     }
 
     .start-animation .title-1 {
@@ -305,8 +305,8 @@ iframe {
     }
 
     .start-animation .cta {
-        bottom: 12%;
-        width: 38%;
+        bottom: 10%;
+        width: 34%;
         height: 12%;
     }
 }
