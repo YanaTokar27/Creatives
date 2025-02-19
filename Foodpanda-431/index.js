@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const appContainer = document.querySelector(".LM_container");
+  const adChoice = createAdChoice();
+  appContainer.insertAdjacentElement("beforeend", adChoice);
   appContainer.classList.add("animation");
 
   const video = document.getElementById("myVideo");

@@ -1,3 +1,38 @@
+.ad_choice_container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 77px;
+  height: 15px;
+  border-radius: 0 0 8px 0;
+  overflow: hidden;
+}
+.ad_choice_container .ad_choice_icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 19px;
+  height: 100%;
+  background: #ffffee url(https://i.loopme.me/html/adChoice/img/icon.png) center/cover no-repeat;
+  border-radius: 0 0 8px 0;
+}
+.ad_choice_container .ad_choice_click {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 77px;
+  height: 100%;
+}
+.ad_choice_container .ad_choice_click .ad_choice_link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 iframe {
   display: none;
 }
@@ -19,41 +54,8 @@ img {
   position: relative;
   overflow: hidden;
 }
-.LM_container .ad_choice_container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1000;
-  width: 77px;
-  height: 15px;
-  border-radius: 0 0 8px 0;
-  overflow: hidden;
-}
-.LM_container .ad_choice_container .ad_choice_icon {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 19px;
-  height: 100%;
-  background: #ffffee url(https://i.loopme.me/html/adChoice/img/icon.png) center/cover no-repeat;
-  border-radius: 0 0 8px 0;
-}
-.LM_container .ad_choice_container .ad_choice_click {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 77px;
-  height: 100%;
-}
-.LM_container .ad_choice_container .ad_choice_click .ad_choice_link {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.LM_container .LM_loading_page {
+
+.LM_loading_page {
   display: none;
   position: absolute;
   z-index: 100000;
@@ -61,7 +63,7 @@ img {
   height: 100%;
   background: #000;
 }
-.LM_container .LM_loading_page .preloader {
+.LM_loading_page .preloader {
   display: inline-block;
   font-size: 0;
   padding: 0;
@@ -69,7 +71,8 @@ img {
   top: 50%;
   left: 50%;
 }
-.LM_container .LM_landscape {
+
+.LM_landscape {
   display: none;
   position: absolute;
   top: 0;
@@ -81,24 +84,25 @@ img {
   background-size: 70px;
   z-index: 100000000;
 }
-.LM_container .LM_content {
+
+.LM_content {
   width: 100%;
   height: 100%;
   overflow: hidden;
   background: rgb(248, 248, 248);
 }
-.LM_container .LM_content header .LM_video {
+.LM_content header .LM_video {
   width: 100%;
   aspect-ratio: 16/9;
 }
-.LM_container .LM_content header .LM_video .video,
-.LM_container .LM_content header .LM_video .screen {
+.LM_content header .LM_video .video,
+.LM_content header .LM_video .screen {
   width: 100%;
   height: 100%;
   position: relative;
   z-index: 2;
 }
-.LM_container .LM_content header .LM_video .btn {
+.LM_content header .LM_video .btn {
   position: absolute;
   width: 8%;
   height: 7%;
@@ -112,14 +116,14 @@ img {
   background-position: 50% 50%;
   z-index: 3;
 }
-.LM_container .LM_content header .LM_video .sound-btn {
+.LM_content header .LM_video .sound-btn {
   background-image: url(https://i.loopme.me/html/loopme_standart_icons/unmute.png);
   background-repeat: no-repeat;
 }
-.LM_container .LM_content header .LM_video .hidden {
+.LM_content header .LM_video .hidden {
   display: none;
 }
-.LM_container .LM_content main {
+.LM_content main {
   position: relative;
   width: 100%;
   height: 70%;
@@ -127,7 +131,7 @@ img {
   flex-direction: column;
   justify-content: center;
 }
-.LM_container .LM_content main .panda {
+.LM_content main .panda {
   position: absolute;
   left: -10%;
   top: 11%;
@@ -141,26 +145,26 @@ img {
   }
 }
 @media (min-aspect-ratio: 550/1000) {
-  .LM_container .LM_content main .panda {
+  .LM_content main .panda {
     top: 9%;
   }
 }
 @media (min-aspect-ratio: 570/1000) {
-  .LM_container .LM_content main .panda {
+  .LM_content main .panda {
     top: 8%;
   }
 }
 @media (min-aspect-ratio: 580/1000) {
-  .LM_container .LM_content main .panda {
+  .LM_content main .panda {
     top: 7%;
   }
 }
 @media (min-aspect-ratio: 600/1000) {
-  .LM_container .LM_content main .panda {
+  .LM_content main .panda {
     top: 3%;
   }
 }
-.LM_container .LM_content main .logo {
+.LM_content main .logo {
   position: absolute;
   top: 5%;
   width: 48%;
@@ -170,7 +174,7 @@ img {
   animation: changeOpacity 0.5s linear 2s forwards;
 }
 @media (min-aspect-ratio: 600/1000) {
-  .LM_container .LM_content main .logo {
+  .LM_content main .logo {
     top: 3%;
     width: 45%;
   }
@@ -180,7 +184,7 @@ img {
     opacity: 1;
   }
 }
-.LM_container .LM_content main .inscription {
+.LM_content main .inscription {
   position: absolute;
   width: 35%;
   z-index: 1;
@@ -195,18 +199,18 @@ img {
   }
 }
 @media (min-aspect-ratio: 570/1000) {
-  .LM_container .LM_content main .inscription {
+  .LM_content main .inscription {
     width: 32%;
     right: 7%;
     bottom: 21%;
   }
 }
 @media (min-aspect-ratio: 600/1000) {
-  .LM_container .LM_content main .inscription {
+  .LM_content main .inscription {
     width: 28%;
   }
 }
-.LM_container .LM_content main .bag {
+.LM_content main .bag {
   position: absolute;
   width: 20%;
   z-index: 1;
@@ -233,22 +237,22 @@ img {
   }
 }
 @media (min-aspect-ratio: 510/1000) {
-  .LM_container .LM_content main .bag {
+  .LM_content main .bag {
     top: 38%;
   }
 }
 @media (min-aspect-ratio: 580/1000) {
-  .LM_container .LM_content main .bag {
+  .LM_content main .bag {
     top: 37%;
   }
 }
 @media (min-aspect-ratio: 600/1000) {
-  .LM_container .LM_content main .bag {
+  .LM_content main .bag {
     right: 8%;
     top: 34%;
   }
 }
-.LM_container .LM_content main .cta {
+.LM_content main .cta {
   position: absolute;
   bottom: 10%;
   width: 40%;
@@ -265,17 +269,17 @@ img {
     transform: scale(1.1);
   }
 }
-.LM_container .LM_content main .leaves {
+.LM_content main .leaves {
   position: absolute;
   width: 50%;
   z-index: 2;
 }
-.LM_container .LM_content main .leaves-1,
-.LM_container .LM_content main .leaves-2,
-.LM_container .LM_content main .leaves-3 {
+.LM_content main .leaves-1,
+.LM_content main .leaves-2,
+.LM_content main .leaves-3 {
   bottom: 0;
 }
-.LM_container .LM_content main .leaves-1 {
+.LM_content main .leaves-1 {
   width: 98%;
   right: 0;
   animation: leaves-anim-right 1s linear forwards;
@@ -285,7 +289,7 @@ img {
     transform: translateX(100%);
   }
 }
-.LM_container .LM_content main .leaves-2 {
+.LM_content main .leaves-2 {
   width: 91%;
   right: 9%;
   animation: leaves-anim-left 1s linear forwards;
@@ -295,8 +299,8 @@ img {
     transform: translateX(-100%);
   }
 }
-.LM_container .LM_content main .leaves-3,
-.LM_container .LM_content main .leaves-4 {
+.LM_content main .leaves-3,
+.LM_content main .leaves-4 {
   width: 100%;
   animation: leaves-anim-bottom 1s linear forwards;
 }
@@ -305,24 +309,24 @@ img {
     transform: translateY(150%);
   }
 }
-.LM_container .LM_content main .leaves-bottom {
+.LM_content main .leaves-bottom {
   position: absolute;
   left: 0%;
   width: 51%;
   bottom: -2%;
 }
 @media (min-aspect-ratio: 528/1000) {
-  .LM_container .LM_content main .leaves-bottom {
+  .LM_content main .leaves-bottom {
     bottom: -4%;
   }
 }
 @media (min-aspect-ratio: 550/1000) {
-  .LM_container .LM_content main .leaves-bottom {
+  .LM_content main .leaves-bottom {
     bottom: -6%;
   }
 }
 @media (min-aspect-ratio: 550/1000) {
-  .LM_container .LM_content main .leaves-bottom {
+  .LM_content main .leaves-bottom {
     bottom: -8%;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
