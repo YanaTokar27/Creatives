@@ -61,11 +61,6 @@ img {
   height: 100%;
   background: #000;
 }
-.LM_container .LM_loading_page img {
-  position: absolute;
-  height: auto;
-  width: 100%;
-}
 .LM_container .LM_loading_page .preloader {
   display: inline-block;
   font-size: 0;
