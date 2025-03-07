@@ -1,0 +1,450 @@
+@use './adChoice.scss';
+
+iframe {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.LM_container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.LM_loading_page {
+    display: none;
+    position: absolute;
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    background: #000;
+
+    .preloader {
+        display: inline-block;
+        font-size: 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+.LM_landscape {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #ffffff url(https://i.loopme.me/html/general/not_available.png) no-repeat;
+    background-position: center center;
+    background-size: 70px;
+    z-index: 100000000;
+}
+
+.LM_content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .logoZone {
+        height: 10%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .headerShadow {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            animation: shadow 2s linear infinite;
+
+            @keyframes shadow {
+                50% {
+                    opacity: .5;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .logo {
+            position: absolute;
+            top: 40%;
+            width: 28%;
+        }
+    }
+
+    .bgZone {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 40%;
+            width: 55%;
+            position: absolute;
+            top: 0;
+
+            .dash,
+            .for,
+            .gold,
+            .sparkle,
+            .cross {
+                position: absolute;
+                width: 100%;
+                top: 0;
+            }
+
+            .sparkleItem1 {
+                animation: sparkleTitle 5s 0s linear infinite;
+            }
+
+            .sparkleItem2 {
+                animation: sparkleTitle 5s 3s linear infinite;
+            }
+
+            .sparkleItem3 {
+                animation: sparkleTitle 5s 1s linear infinite;
+            }
+
+            .sparkleItem4 {
+                animation: sparkleTitle 5s 4s linear infinite;
+            }
+
+            .sparkleItem5 {
+                animation: sparkleTitle 5s 2s linear infinite;
+            }
+
+            .sparkleItem6 {
+                animation: sparkleTitle 5s 5s linear infinite;
+            }
+
+            @keyframes sparkleTitle {
+
+                0%,
+                30%,
+                70%,
+                100% {
+                    opacity: 1;
+                }
+
+                10%,
+                50%,
+                85% {
+                    opacity: 0.4;
+                }
+            }
+
+            .title_cross,
+            .title_with,
+            .title_panda {
+                position: absolute;
+                width: 100%;
+            }
+        }
+
+        .title_text {
+            height: 5%;
+            width: 80%;
+            position: absolute;
+            top: 44%;
+
+            .text {
+                position: absolute;
+                width: 100%;
+            }
+        }
+
+        .images {
+            height: 55%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+
+            .box {
+                .boxChest {
+                    width: 63%;
+                    position: absolute;
+                    top: 12%;
+                    right: 0;
+                }
+
+                .boxCoins {
+                    width: 14%;
+                    position: absolute;
+                    top: 73%;
+                    right: 48%;
+                }
+
+                .chestSparkle1,
+                .chestSparkle2 {
+                    height: 55%;
+                    position: absolute;
+                    top: 12%;
+                    right: 2%;
+                    opacity: 0;
+                }
+
+                .chestSparkle1 {
+                    animation: sparkleCoins 5s linear infinite;
+                }
+
+                .chestSparkle2 {
+                    animation: sparkleCoins 5s 1s linear infinite;
+                }
+
+                .chestSparkle3 {
+                    height: 55%;
+                    position: absolute;
+                    top: 12%;
+                    right: -1%;
+                    animation: sparkleCoins 5s linear infinite;
+                }
+
+                @keyframes sparkleCoins {
+                    0%,
+                    45%,
+                    100% {
+                        opacity: 0;
+                    }
+                    25%,
+                    65% {
+                        opacity: .6;
+                    }
+                    80% {
+                        opacity: .4;
+                    }
+                }
+            }
+
+            .panda {
+                .pandaArm,
+                .pandaBody,
+                .pandaHead,
+                .pandaGlass,
+                .pandaHand,
+                .pandaMouth {
+                    top: 11%;
+                    position: absolute;
+                    width: 61%;
+                    left: -3%;
+                }
+
+                .pandaArm {
+                    transform: rotate(0);
+                    animation: moveArm 3s linear infinite;
+
+                    @keyframes moveArm {
+
+                        0%,
+                        90%,
+                        100% {
+                            transform: rotate(0deg);
+                        }
+
+                        30% {
+                            transform: rotate(-2deg);
+                        }
+
+                        60% {
+                            transform: rotate(2deg);
+                        }
+                    }
+                }
+
+                .pandaHead {
+                    transform: rotate(0);
+                    animation: moveHead 3s linear infinite;
+
+                    @keyframes moveHead {
+
+                        0%,
+                        100% {
+                            transform: rotate(0deg);
+                        }
+
+                        35% {
+                            transform: rotate(-3deg);
+                        }
+
+                        75% {
+                            transform: rotate(3deg);
+                        }
+                    }
+                }
+
+                .pandaGlass {
+                    top: 12%;
+                    animation: moveGlass 7s linear infinite;
+
+                    @keyframes moveGlass {
+
+                        0%,
+                        50% {
+                            transform: rotate(0deg);
+                        }
+
+                        25% {
+                            transform: rotate(-5deg);
+                        }
+
+                        75% {
+                            transform: rotate(-5deg);
+                        }
+
+                        100% {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+
+                .pandaMouth {
+                    top: 12%;
+                }
+
+                .pandaSparkle {
+                    top: 8%;
+                    position: absolute;
+                    width: 61%;
+                    left: -4%;
+                    transform: translateX(0);
+                    animation: pandaSparkleAnim 1.8s linear infinite;
+
+                    @keyframes pandaSparkleAnim {
+
+                        0%,
+                        100% {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+
+                        50% {
+                            opacity: 0.5;
+                            transform: translateX(-5%);
+                        }
+                    }
+                }
+            }
+
+            .fruits {
+
+                .grapes,
+                .grapesShadow {
+                    top: 76%;
+                    position: absolute;
+                    width: 39%;
+                    left: -3%;
+                }
+
+                .carrot,
+                .carrotShadow {
+                    top: 66%;
+                    position: absolute;
+                    width: 30%;
+                    left: 59%;
+                    transform: rotate(-14deg);
+                }
+
+                .cabbage,
+                .cabbageShadow {
+                    top: 74%;
+                    position: absolute;
+                    width: 33%;
+                    left: 70%;
+                }
+
+                .orange,
+                .orangeShadow {
+                    top: 76%;
+                    position: absolute;
+                    width: 26%;
+                    left: 45%;
+                }
+
+                .apple {
+                    top: 43%;
+                    position: absolute;
+                    width: 12%;
+                    left: 4%;
+                }
+            }
+        }
+    }
+
+    .ctaZone {
+        // border: 2px solid blue;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        bottom: 1%;
+
+        .cta {
+            height: 70%;
+            width: 50%;
+            position: absolute;
+            // border: 2px solid red;
+            position: relative;
+
+            .ctaShadow,
+            .ctaBtn,
+            .ctaText1,
+            .ctaText2 {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .ctaAnim {
+                animation: clickOnCta 9s 2s linear infinite;
+
+                @keyframes clickOnCta {
+                    0% {
+                        transform: translateY(0);
+                    }
+
+                    5% {
+                        transform: translateY(10%);
+                    }
+
+                    10%, 100% {
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            .ctaShadow {
+                top: 2%;
+            }
+        }
+
+        .tSc {
+            position: absolute;
+            width: 15%;
+            bottom: -1%;
+        }
+    }
+}

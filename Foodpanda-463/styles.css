@@ -1,0 +1,396 @@
+.ad_choice_container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 77px;
+  height: 15px;
+  border-radius: 0 0 8px 0;
+  overflow: hidden;
+}
+.ad_choice_container .ad_choice_icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 19px;
+  height: 100%;
+  background: #ffffee url(https://i.loopme.me/html/adChoice/img/icon.png) center/cover no-repeat;
+  border-radius: 0 0 8px 0;
+}
+.ad_choice_container .ad_choice_click {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 77px;
+  height: 100%;
+}
+.ad_choice_container .ad_choice_click .ad_choice_link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.LM_container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.LM_loading_page {
+  display: none;
+  position: absolute;
+  z-index: 100000;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.LM_loading_page .preloader {
+  display: inline-block;
+  font-size: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.LM_landscape {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #ffffff url(https://i.loopme.me/html/general/not_available.png) no-repeat;
+  background-position: center center;
+  background-size: 70px;
+  z-index: 100000000;
+}
+
+.LM_content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.LM_content .logoZone {
+  height: 10%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.LM_content .logoZone .headerShadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: shadow 2s linear infinite;
+}
+@keyframes shadow {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.LM_content .logoZone .logo {
+  position: absolute;
+  top: 40%;
+  width: 28%;
+}
+.LM_content .bgZone {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.LM_content .bgZone .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  width: 55%;
+  position: absolute;
+  top: 0;
+}
+.LM_content .bgZone .title .dash,
+.LM_content .bgZone .title .for,
+.LM_content .bgZone .title .gold,
+.LM_content .bgZone .title .sparkle,
+.LM_content .bgZone .title .cross {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.LM_content .bgZone .title .sparkleItem1 {
+  animation: sparkleTitle 5s 0s linear infinite;
+}
+.LM_content .bgZone .title .sparkleItem2 {
+  animation: sparkleTitle 5s 3s linear infinite;
+}
+.LM_content .bgZone .title .sparkleItem3 {
+  animation: sparkleTitle 5s 1s linear infinite;
+}
+.LM_content .bgZone .title .sparkleItem4 {
+  animation: sparkleTitle 5s 4s linear infinite;
+}
+.LM_content .bgZone .title .sparkleItem5 {
+  animation: sparkleTitle 5s 2s linear infinite;
+}
+.LM_content .bgZone .title .sparkleItem6 {
+  animation: sparkleTitle 5s 5s linear infinite;
+}
+@keyframes sparkleTitle {
+  0%, 30%, 70%, 100% {
+    opacity: 1;
+  }
+  10%, 50%, 85% {
+    opacity: 0.4;
+  }
+}
+.LM_content .bgZone .title .title_cross,
+.LM_content .bgZone .title .title_with,
+.LM_content .bgZone .title .title_panda {
+  position: absolute;
+  width: 100%;
+}
+.LM_content .bgZone .title_text {
+  height: 5%;
+  width: 80%;
+  position: absolute;
+  top: 44%;
+}
+.LM_content .bgZone .title_text .text {
+  position: absolute;
+  width: 100%;
+}
+.LM_content .bgZone .images {
+  height: 55%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.LM_content .bgZone .images .box .boxChest {
+  width: 63%;
+  position: absolute;
+  top: 12%;
+  right: 0;
+}
+.LM_content .bgZone .images .box .boxCoins {
+  width: 14%;
+  position: absolute;
+  top: 73%;
+  right: 48%;
+}
+.LM_content .bgZone .images .box .chestSparkle1,
+.LM_content .bgZone .images .box .chestSparkle2 {
+  height: 55%;
+  position: absolute;
+  top: 12%;
+  right: 2%;
+  opacity: 0;
+}
+.LM_content .bgZone .images .box .chestSparkle1 {
+  animation: sparkleCoins 5s linear infinite;
+}
+.LM_content .bgZone .images .box .chestSparkle2 {
+  animation: sparkleCoins 5s 1s linear infinite;
+}
+.LM_content .bgZone .images .box .chestSparkle3 {
+  height: 55%;
+  position: absolute;
+  top: 12%;
+  right: -1%;
+  animation: sparkleCoins 5s linear infinite;
+}
+@keyframes sparkleCoins {
+  0%, 45%, 100% {
+    opacity: 0;
+  }
+  25%, 65% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.4;
+  }
+}
+.LM_content .bgZone .images .panda .pandaArm,
+.LM_content .bgZone .images .panda .pandaBody,
+.LM_content .bgZone .images .panda .pandaHead,
+.LM_content .bgZone .images .panda .pandaGlass,
+.LM_content .bgZone .images .panda .pandaHand,
+.LM_content .bgZone .images .panda .pandaMouth {
+  top: 11%;
+  position: absolute;
+  width: 61%;
+  left: -3%;
+}
+.LM_content .bgZone .images .panda .pandaArm {
+  transform: rotate(0);
+  animation: moveArm 3s linear infinite;
+}
+@keyframes moveArm {
+  0%, 90%, 100% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  60% {
+    transform: rotate(2deg);
+  }
+}
+.LM_content .bgZone .images .panda .pandaHead {
+  transform: rotate(0);
+  animation: moveHead 3s linear infinite;
+}
+@keyframes moveHead {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+}
+.LM_content .bgZone .images .panda .pandaGlass {
+  top: 12%;
+  animation: moveGlass 7s linear infinite;
+}
+@keyframes moveGlass {
+  0%, 50% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.LM_content .bgZone .images .panda .pandaMouth {
+  top: 12%;
+}
+.LM_content .bgZone .images .panda .pandaSparkle {
+  top: 8%;
+  position: absolute;
+  width: 61%;
+  left: -4%;
+  transform: translateX(0);
+  animation: pandaSparkleAnim 1.8s linear infinite;
+}
+@keyframes pandaSparkleAnim {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-5%);
+  }
+}
+.LM_content .bgZone .images .fruits .grapes,
+.LM_content .bgZone .images .fruits .grapesShadow {
+  top: 76%;
+  position: absolute;
+  width: 39%;
+  left: -3%;
+}
+.LM_content .bgZone .images .fruits .carrot,
+.LM_content .bgZone .images .fruits .carrotShadow {
+  top: 66%;
+  position: absolute;
+  width: 30%;
+  left: 59%;
+  transform: rotate(-14deg);
+}
+.LM_content .bgZone .images .fruits .cabbage,
+.LM_content .bgZone .images .fruits .cabbageShadow {
+  top: 74%;
+  position: absolute;
+  width: 33%;
+  left: 70%;
+}
+.LM_content .bgZone .images .fruits .orange,
+.LM_content .bgZone .images .fruits .orangeShadow {
+  top: 76%;
+  position: absolute;
+  width: 26%;
+  left: 45%;
+}
+.LM_content .bgZone .images .fruits .apple {
+  top: 43%;
+  position: absolute;
+  width: 12%;
+  left: 4%;
+}
+.LM_content .ctaZone {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 1%;
+}
+.LM_content .ctaZone .cta {
+  height: 70%;
+  width: 50%;
+  position: absolute;
+  position: relative;
+}
+.LM_content .ctaZone .cta .ctaShadow,
+.LM_content .ctaZone .cta .ctaBtn,
+.LM_content .ctaZone .cta .ctaText1,
+.LM_content .ctaZone .cta .ctaText2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.LM_content .ctaZone .cta .ctaAnim {
+  animation: clickOnCta 9s 2s linear infinite;
+}
+@keyframes clickOnCta {
+  0% {
+    transform: translateY(0);
+  }
+  5% {
+    transform: translateY(10%);
+  }
+  10%, 100% {
+    transform: translateY(0);
+  }
+}
+.LM_content .ctaZone .cta .ctaShadow {
+  top: 2%;
+}
+.LM_content .ctaZone .tSc {
+  position: absolute;
+  width: 15%;
+  bottom: -1%;
+}/*# sourceMappingURL=styles.css.map */
