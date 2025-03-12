@@ -6,30 +6,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const video = document.getElementById("myVideo");
 
-  video.addEventListener("ended", () => {
-    video.classList.add("hidden");
-    btn.classList.add("hidden");
-    screenshot.classList.remove("hidden");
-  });
+  extendedVideo(video)
 
-  function changeOrientation() {
-    const landscapeBlock = document.querySelector(".LM_landscape");
-  
-    if (window.matchMedia("(orientation: landscape)").matches) {
-      video.pause();
-      landscapeBlock.style.display = "block";
-    } else {
-      video.play();
-      landscapeBlock.style.display = "none";
-    }
-  }
-  
-  window.addEventListener("orientationchange", changeOrientation);
-  window.addEventListener("resize", changeOrientation);
-  
-  changeOrientation();
+  // video.addEventListener("ended", () => {
+  //   video.classList.add("hidden");
+  //   btn.classList.add("hidden");
+  //   screenshot.classList.remove("hidden");
+  // });
 
-  const screenshot = document.getElementById("screenshot");
+  // function changeOrientation() {
+  //   const landscapeBlock = document.querySelector(".LM_landscape");
+  
+  //   if (window.matchMedia("(orientation: landscape)").matches) {
+  //     video.pause();
+  //     landscapeBlock.style.display = "block";
+  //   } else {
+  //     video.play();
+  //     landscapeBlock.style.display = "none";
+  //   }
+  // }
+  
+  // window.addEventListener("orientationchange", changeOrientation);
+  // window.addEventListener("resize", changeOrientation);
+  
+  // changeOrientation();
+
+  // const screenshot = document.getElementById("screenshot");
 
   screenshot.addEventListener("click", () => {
     btn.classList.remove("hidden");
