@@ -115,6 +115,15 @@ iframe {
   position: absolute;
   top: 40%;
   width: 28%;
+  animation: logoMove 1.5s forwards;
+}
+@keyframes logoMove {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .LM_content .bgZone {
   height: 80%;
@@ -142,38 +151,156 @@ iframe {
   position: absolute;
   width: 100%;
   top: 0;
+  opacity: 0;
 }
-.LM_content .bgZone .title .sparkleItem1 {
-  animation: sparkleTitle 5s 0s linear infinite;
+.LM_content .bgZone .title .dash {
+  transform: translateY(9%);
 }
-.LM_content .bgZone .title .sparkleItem2 {
-  animation: sparkleTitle 5s 3s linear infinite;
-}
-.LM_content .bgZone .title .sparkleItem3 {
-  animation: sparkleTitle 5s 1s linear infinite;
-}
-.LM_content .bgZone .title .sparkleItem4 {
-  animation: sparkleTitle 5s 4s linear infinite;
-}
+.LM_content .bgZone .title .sparkleItem1,
+.LM_content .bgZone .title .sparkleItem2,
+.LM_content .bgZone .title .sparkleItem3,
+.LM_content .bgZone .title .sparkleItem4,
 .LM_content .bgZone .title .sparkleItem5 {
-  animation: sparkleTitle 5s 2s linear infinite;
+  opacity: 0;
+  transform: scale(0.2);
+  animation: titleUp 1.5s linear 1s forwards, sparkleTitle 5s linear 1s infinite;
 }
 .LM_content .bgZone .title .sparkleItem6 {
-  animation: sparkleTitle 5s 5s linear infinite;
+  opacity: 0;
+  transform: scale(0.2);
+  animation: titleUp 1.5s linear 1s forwards, sparkleTitle 5s linear infinite;
+}
+@keyframes titleUp {
+  40%, 100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 @keyframes sparkleTitle {
   0%, 30%, 70%, 100% {
     opacity: 1;
   }
   10%, 50%, 85% {
-    opacity: 0.4;
+    opacity: 0.7;
   }
+}
+.LM_content .bgZone .title .for {
+  transform: translateY(13%) scale(0.2);
+  opacity: 0;
+}
+.LM_content .bgZone .title .gold {
+  transform: translateY(17%) scale(0.2);
+  opacity: 0;
+}
+.LM_content .bgZone .title .sparkleAnim1,
+.LM_content .bgZone .title .sparkleAnim2,
+.LM_content .bgZone .title .sparkleAnim3,
+.LM_content .bgZone .title .sparkleAnim4,
+.LM_content .bgZone .title .sparkleAnim5 {
+  opacity: 0;
+}
+.LM_content .bgZone .title .sparkleAnim1 {
+  animation: sparkleAnim 4s linear 1s infinite;
+}
+.LM_content .bgZone .title .sparkleAnim2 {
+  animation: sparkleAnim 4s linear 3s infinite;
+}
+.LM_content .bgZone .title .sparkleAnim3 {
+  animation: sparkleAnim 4s linear 2s infinite;
+}
+.LM_content .bgZone .title .sparkleAnim4 {
+  animation: sparkleAnim 4s linear 5s infinite;
+}
+.LM_content .bgZone .title .sparkleAnim5 {
+  animation: sparkleAnim 4s linear 4s infinite;
+}
+@keyframes sparkleAnim {
+  0%, 30%, 70% {
+    opacity: 0;
+  }
+  20%, 40%, 80%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes changeOpacityCross {
+  0% {
+    opacity: 0;
+  }
+  10%, 100% {
+    opacity: 1;
+  }
+}
+.LM_content .bgZone .title .opacityCross1,
+.LM_content .bgZone .title .opacityCross2,
+.LM_content .bgZone .title .opacityCross3,
+.LM_content .bgZone .title .opacityCross4,
+.LM_content .bgZone .title .opacityCross5,
+.LM_content .bgZone .title .opacityCross6,
+.LM_content .bgZone .title .opacityCross7,
+.LM_content .bgZone .title .opacityCross8,
+.LM_content .bgZone .title .opacityCross9,
+.LM_content .bgZone .title .opacityCross10,
+.LM_content .bgZone .title .opacityCross11,
+.LM_content .bgZone .title .title_cross {
+  opacity: 0;
+  animation: changeOpacityCross 1.5s ease-in-out forwards;
+}
+.LM_content .bgZone .title .opacityCross1 {
+  animation-delay: 1.5s;
+}
+.LM_content .bgZone .title .opacityCross2 {
+  animation-delay: 1.6s;
+}
+.LM_content .bgZone .title .opacityCross3 {
+  animation-delay: 1.7s;
+}
+.LM_content .bgZone .title .opacityCross4 {
+  animation-delay: 1.8s;
+}
+.LM_content .bgZone .title .opacityCross5 {
+  animation-delay: 1.9s;
+}
+.LM_content .bgZone .title .opacityCross6 {
+  animation-delay: 2s;
+}
+.LM_content .bgZone .title .opacityCross7 {
+  animation-delay: 2.1s;
+}
+.LM_content .bgZone .title .opacityCross8 {
+  animation-delay: 2.2s;
+}
+.LM_content .bgZone .title .opacityCross9 {
+  animation-delay: 2.3s;
+}
+.LM_content .bgZone .title .opacityCross10 {
+  animation-delay: 2.4s;
+}
+.LM_content .bgZone .title .opacityCross11 {
+  animation-delay: 2.5s;
+}
+.LM_content .bgZone .title .title_cross {
+  animation-delay: 2.6s;
 }
 .LM_content .bgZone .title .title_cross,
 .LM_content .bgZone .title .title_with,
 .LM_content .bgZone .title .title_panda {
+  opacity: 0;
   position: absolute;
   width: 100%;
+}
+.LM_content .bgZone .title .title_with {
+  animation: changeOpacity 3s ease-in-out 1.5s forwards;
+}
+.LM_content .bgZone .title .title_panda {
+  animation: changeOpacity 3s ease-in-out 1.8s forwards;
+}
+@keyframes changeOpacity {
+  0% {
+    opacity: 0;
+  }
+  50%, 100% {
+    opacity: 100%;
+  }
 }
 .LM_content .bgZone .title_text {
   height: 5%;
@@ -184,6 +311,8 @@ iframe {
 .LM_content .bgZone .title_text .text {
   position: absolute;
   width: 100%;
+  opacity: 0;
+  animation: changeOpacity 2s ease-in-out 3s forwards;
 }
 .LM_content .bgZone .images {
   height: 55%;
@@ -233,6 +362,23 @@ iframe {
   }
   80% {
     opacity: 0.4;
+  }
+}
+.LM_content .bgZone .images .panda {
+  opacity: 0;
+  top: 9%;
+  position: relative;
+  transform: translateY(-25%);
+  animation: movePanda 2s ease-in-out 1.5s forwards;
+}
+@keyframes movePanda {
+  0% {
+    opacity: 0;
+    transform: translateX(-60%);
+  }
+  20%, 100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 .LM_content .bgZone .images .panda .pandaArm,
@@ -315,12 +461,24 @@ iframe {
     transform: translateX(-5%);
   }
 }
+.LM_content .bgZone .images .fruits {
+  opacity: 0;
+  animation: changeOpacity 2s ease-in-out 2.5s forwards;
+}
 .LM_content .bgZone .images .fruits .grapes,
 .LM_content .bgZone .images .fruits .grapesShadow {
   top: 76%;
   position: absolute;
   width: 39%;
   left: -3%;
+  opacity: 0;
+  z-index: 2;
+}
+.LM_content .bgZone .images .fruits .grapes {
+  animation: animFruit 1.2s ease-in-out 2s forwards;
+}
+.LM_content .bgZone .images .fruits .grapesShadow {
+  animation: changeOpacityText 1.5s linear 1.8s forwards;
 }
 .LM_content .bgZone .images .fruits .carrot,
 .LM_content .bgZone .images .fruits .carrotShadow {
@@ -328,7 +486,13 @@ iframe {
   position: absolute;
   width: 30%;
   left: 59%;
-  transform: rotate(-14deg);
+  opacity: 0;
+}
+.LM_content .bgZone .images .fruits .carrot {
+  animation: animFruit 1s ease-in-out 2.4s forwards;
+}
+.LM_content .bgZone .images .fruits .carrotShadow {
+  animation: changeOpacityText 1.5s linear 2.2s forwards;
 }
 .LM_content .bgZone .images .fruits .cabbage,
 .LM_content .bgZone .images .fruits .cabbageShadow {
@@ -336,6 +500,13 @@ iframe {
   position: absolute;
   width: 33%;
   left: 70%;
+  opacity: 0;
+}
+.LM_content .bgZone .images .fruits .cabbage {
+  animation: animFruit 1s ease-in-out 2.2s forwards;
+}
+.LM_content .bgZone .images .fruits .cabbageShadow {
+  animation: changeOpacityText 1.5s linear 2s forwards;
 }
 .LM_content .bgZone .images .fruits .orange,
 .LM_content .bgZone .images .fruits .orangeShadow {
@@ -343,12 +514,90 @@ iframe {
   position: absolute;
   width: 26%;
   left: 45%;
+  transform-origin: center;
+  opacity: 0;
+}
+.LM_content .bgZone .images .fruits .orange {
+  animation: animFruit 1s ease-in-out 2.8s forwards;
+}
+.LM_content .bgZone .images .fruits .orangeShadow {
+  animation: changeOpacityText 1.5s linear 2.8s forwards;
 }
 .LM_content .bgZone .images .fruits .apple {
   top: 43%;
   position: absolute;
   width: 12%;
   left: 4%;
+  opacity: 0;
+  animation: moveApple 2s linear 6s forwards;
+}
+@keyframes moveApple {
+  0% {
+    opacity: 1;
+    transform: translateY(-1000%);
+  }
+  20%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.LM_content .bgZone .images .fruits .leafFirst {
+  position: absolute;
+  bottom: 2%;
+  left: 7%;
+  width: 5%;
+  animation: leafAnimation 3s linear 3.5s forwards;
+  transform: translateY(-3500%);
+  opacity: 0;
+}
+.LM_content .bgZone .images .fruits .leafSecond {
+  position: absolute;
+  bottom: 2%;
+  left: 7%;
+  width: 5%;
+  animation: leafAnimation 4s linear 4s forwards;
+  opacity: 0;
+  z-index: 1;
+}
+@keyframes leafAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(-3500%);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-2500%) rotate(30deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-1500%) rotate(-30deg);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(-500%) rotate(30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+@keyframes animFruit {
+  0% {
+    opacity: 1;
+    transform: translateY(-2000%) rotate(220deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+@keyframes changeOpacityText {
+  0% {
+    opacity: 0;
+  }
+  30%, 100% {
+    opacity: 1;
+  }
 }
 .LM_content .ctaZone {
   height: 10%;
@@ -371,9 +620,26 @@ iframe {
   position: absolute;
   width: 100%;
   height: 100%;
+  opacity: 0;
 }
-.LM_content .ctaZone .cta .ctaAnim {
-  animation: clickOnCta 9s 2s linear infinite;
+.LM_content .ctaZone .cta .ctaText1 {
+  animation: changeOpacityText 2s linear 4.8s forwards, clickOnCta 9s linear 6s infinite;
+}
+.LM_content .ctaZone .cta .ctaText2 {
+  animation: changeOpacityText 2s linear 5s forwards, clickOnCta 9s linear 6s infinite;
+}
+.LM_content .ctaZone .cta .ctaBtn {
+  animation: changeScaleCta 1.4s linear 4.4s forwards, clickOnCta 9s linear 6s infinite;
+}
+@keyframes changeScaleCta {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  20%, 100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 @keyframes clickOnCta {
   0% {
@@ -387,10 +653,21 @@ iframe {
   }
 }
 .LM_content .ctaZone .cta .ctaShadow {
+  animation: changeScaleCta 1.5s linear 4.4s forwards;
   top: 2%;
 }
 .LM_content .ctaZone .tSc {
   position: absolute;
   width: 15%;
   bottom: -1%;
+  opacity: 0;
+  animation: changeOpacityTsc 1s ease-in-out 4s forwards;
+}
+@keyframes changeOpacityTsc {
+  0% {
+    opacity: 0;
+  }
+  70%, 100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=styles.css.map */
