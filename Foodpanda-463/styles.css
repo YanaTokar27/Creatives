@@ -321,24 +321,78 @@ iframe {
   bottom: 0;
 }
 .LM_content .bgZone .images .box .boxChest {
-  width: 63%;
+  width: 65%;
   position: absolute;
-  top: 12%;
+  top: 19%;
   right: 0;
 }
+@media (min-aspect-ratio: 540/1000) {
+  .LM_content .bgZone .images .box .boxChest {
+    top: 15%;
+  }
+}
+@media (min-aspect-ratio: 540/1000) {
+  .LM_content .bgZone .images .box .boxChest {
+    top: 14%;
+  }
+}
+@media (min-aspect-ratio: 600/1000) {
+  .LM_content .bgZone .images .box .boxChest {
+    width: 64%;
+  }
+}
 .LM_content .bgZone .images .box .boxCoins {
-  width: 14%;
+  width: 17%;
   position: absolute;
-  top: 73%;
-  right: 48%;
+  top: 69%;
+  right: 46%;
+}
+@media (min-aspect-ratio: 510/1000) {
+  .LM_content .bgZone .images .box .boxCoins {
+    width: 15%;
+    top: 74%;
+    right: 48%;
+  }
+}
+@media (min-aspect-ratio: 510/1000) {
+  .LM_content .bgZone .images .box .boxCoins {
+    top: 79%;
+    right: 49%;
+  }
 }
 .LM_content .bgZone .images .box .chestSparkle1,
 .LM_content .bgZone .images .box .chestSparkle2 {
   height: 55%;
   position: absolute;
-  top: 12%;
-  right: 2%;
+  top: 17%;
+  right: -2%;
   opacity: 0;
+}
+@media (min-aspect-ratio: 490/1000) {
+  .LM_content .bgZone .images .box .chestSparkle1,
+  .LM_content .bgZone .images .box .chestSparkle2 {
+    top: 18%;
+    right: -1%;
+  }
+}
+@media (min-aspect-ratio: 510/1000) {
+  .LM_content .bgZone .images .box .chestSparkle1,
+  .LM_content .bgZone .images .box .chestSparkle2 {
+    top: 19%;
+    right: 2%;
+  }
+}
+@media (min-aspect-ratio: 540/1000) {
+  .LM_content .bgZone .images .box .chestSparkle1,
+  .LM_content .bgZone .images .box .chestSparkle2 {
+    top: 15%;
+  }
+}
+@media (min-aspect-ratio: 600/1000) {
+  .LM_content .bgZone .images .box .chestSparkle1,
+  .LM_content .bgZone .images .box .chestSparkle2 {
+    top: 17%;
+  }
 }
 .LM_content .bgZone .images .box .chestSparkle1 {
   animation: sparkleCoins 5s linear infinite;
@@ -350,8 +404,49 @@ iframe {
   height: 55%;
   position: absolute;
   top: 12%;
-  right: -1%;
+  right: -3%;
   animation: sparkleCoins 5s linear infinite;
+}
+@media (min-aspect-ratio: 470/1000) {
+  .LM_content .bgZone .images .box .chestSparkle3 {
+    top: 14%;
+  }
+}
+@media (min-aspect-ratio: 490/1000) {
+  .LM_content .bgZone .images .box .chestSparkle3 {
+    top: 16%;
+  }
+}
+@media (min-aspect-ratio: 510/1000) {
+  .LM_content .bgZone .images .box .chestSparkle3 {
+    top: 17%;
+  }
+}
+@media (min-aspect-ratio: 530/1000) {
+  .LM_content .bgZone .images .box .chestSparkle3 {
+    top: 18%;
+    right: -2%;
+  }
+}
+@media (min-aspect-ratio: 540/1000) {
+  .LM_content .bgZone .images .box .chestSparkle3 {
+    top: 15%;
+  }
+}
+@media (min-aspect-ratio: 560/1000) {
+  .LM_content .bgZone .images .box .chestSparkle3 {
+    top: 16%;
+  }
+}
+@media (min-aspect-ratio: 570/1000) {
+  .LM_content .bgZone .images .box .chestSparkle3 {
+    top: 17%;
+  }
+}
+@media (min-aspect-ratio: 600/1000) {
+  .LM_content .bgZone .images .box .chestSparkle3 {
+    top: 19%;
+  }
 }
 @keyframes sparkleCoins {
   0%, 45%, 100% {
@@ -366,10 +461,15 @@ iframe {
 }
 .LM_content .bgZone .images .panda {
   opacity: 0;
-  top: 9%;
+  top: 16%;
   position: relative;
   transform: translateY(-25%);
   animation: movePanda 2s ease-in-out 1.5s forwards;
+}
+@media (min-aspect-ratio: 540/1000) {
+  .LM_content .bgZone .images .panda {
+    top: 13%;
+  }
 }
 @keyframes movePanda {
   0% {
@@ -389,8 +489,18 @@ iframe {
 .LM_content .bgZone .images .panda .pandaMouth {
   top: 11%;
   position: absolute;
-  width: 61%;
-  left: -3%;
+  width: 64%;
+  left: -6%;
+}
+@media (min-aspect-ratio: 540/1000) {
+  .LM_content .bgZone .images .panda .pandaArm,
+  .LM_content .bgZone .images .panda .pandaBody,
+  .LM_content .bgZone .images .panda .pandaHead,
+  .LM_content .bgZone .images .panda .pandaGlass,
+  .LM_content .bgZone .images .panda .pandaHand,
+  .LM_content .bgZone .images .panda .pandaMouth {
+    width: 62%;
+  }
 }
 .LM_content .bgZone .images .panda .pandaArm {
   transform: rotate(0);
@@ -474,6 +584,38 @@ iframe {
   opacity: 0;
   z-index: 2;
 }
+@media (min-aspect-ratio: 490/1000) {
+  .LM_content .bgZone .images .fruits .grapes,
+  .LM_content .bgZone .images .fruits .grapesShadow {
+    top: 78%;
+  }
+}
+@media (min-aspect-ratio: 520/1000) {
+  .LM_content .bgZone .images .fruits .grapes,
+  .LM_content .bgZone .images .fruits .grapesShadow {
+    top: 80%;
+  }
+}
+@media (min-aspect-ratio: 530/1000) {
+  .LM_content .bgZone .images .fruits .grapes,
+  .LM_content .bgZone .images .fruits .grapesShadow {
+    width: 37%;
+  }
+}
+@media (min-aspect-ratio: 580/1000) {
+  .LM_content .bgZone .images .fruits .grapes,
+  .LM_content .bgZone .images .fruits .grapesShadow {
+    width: 35%;
+    top: 82%;
+  }
+}
+@media (min-aspect-ratio: 600/1000) {
+  .LM_content .bgZone .images .fruits .grapes,
+  .LM_content .bgZone .images .fruits .grapesShadow {
+    width: 33%;
+    top: 83%;
+  }
+}
 .LM_content .bgZone .images .fruits .grapes {
   animation: animFruit 1.2s ease-in-out 2s forwards;
 }
@@ -487,6 +629,20 @@ iframe {
   width: 30%;
   left: 59%;
   opacity: 0;
+}
+@media (min-aspect-ratio: 520/1000) {
+  .LM_content .bgZone .images .fruits .carrot,
+  .LM_content .bgZone .images .fruits .carrotShadow {
+    top: 68%;
+    width: 28%;
+    left: 57%;
+  }
+}
+@media (min-aspect-ratio: 520/1000) {
+  .LM_content .bgZone .images .fruits .carrot,
+  .LM_content .bgZone .images .fruits .carrotShadow {
+    top: 70%;
+  }
 }
 .LM_content .bgZone .images .fruits .carrot {
   animation: animFruit 1s ease-in-out 2.4s forwards;
@@ -502,6 +658,12 @@ iframe {
   left: 70%;
   opacity: 0;
 }
+@media (min-aspect-ratio: 520/1000) {
+  .LM_content .bgZone .images .fruits .cabbage,
+  .LM_content .bgZone .images .fruits .cabbageShadow {
+    top: 76%;
+  }
+}
 .LM_content .bgZone .images .fruits .cabbage {
   animation: animFruit 1s ease-in-out 2.2s forwards;
 }
@@ -516,6 +678,18 @@ iframe {
   left: 45%;
   transform-origin: center;
   opacity: 0;
+}
+@media (min-aspect-ratio: 520/1000) {
+  .LM_content .bgZone .images .fruits .orange,
+  .LM_content .bgZone .images .fruits .orangeShadow {
+    top: 79%;
+  }
+}
+@media (min-aspect-ratio: 600/1000) {
+  .LM_content .bgZone .images .fruits .orange,
+  .LM_content .bgZone .images .fruits .orangeShadow {
+    width: 23%;
+  }
 }
 .LM_content .bgZone .images .fruits .orange {
   animation: animFruit 1s ease-in-out 2.8s forwards;
@@ -541,23 +715,49 @@ iframe {
     transform: translateY(0);
   }
 }
+@media (min-aspect-ratio: 470/1000) {
+  .LM_content .bgZone .images .fruits .apple {
+    top: 45%;
+  }
+}
+@media (min-aspect-ratio: 500/1000) {
+  .LM_content .bgZone .images .fruits .apple {
+    top: 46%;
+    width: 11%;
+  }
+}
+@media (min-aspect-ratio: 610/1000) {
+  .LM_content .bgZone .images .fruits .apple {
+    top: 49%;
+  }
+}
 .LM_content .bgZone .images .fruits .leafFirst {
   position: absolute;
-  bottom: 2%;
+  bottom: 11%;
   left: 7%;
   width: 5%;
   animation: leafAnimation 3s linear 3.5s forwards;
   transform: translateY(-3500%);
   opacity: 0;
 }
+@media (min-aspect-ratio: 530/1000) {
+  .LM_content .bgZone .images .fruits .leafFirst {
+    bottom: 8%;
+  }
+}
 .LM_content .bgZone .images .fruits .leafSecond {
   position: absolute;
-  bottom: 2%;
+  bottom: 13%;
   left: 7%;
   width: 5%;
   animation: leafAnimation 4s linear 4s forwards;
   opacity: 0;
   z-index: 1;
+}
+@media (min-aspect-ratio: 530/1000) {
+  .LM_content .bgZone .images .fruits .leafSecond {
+    bottom: 6%;
+  }
 }
 @keyframes leafAnimation {
   0% {
@@ -608,7 +808,7 @@ iframe {
   bottom: 1%;
 }
 .LM_content .ctaZone .cta {
-  height: 70%;
+  height: 65%;
   width: 50%;
   position: absolute;
   position: relative;
@@ -630,6 +830,11 @@ iframe {
 }
 .LM_content .ctaZone .cta .ctaBtn {
   animation: changeScaleCta 1.4s linear 4.4s forwards, clickOnCta 9s linear 6s infinite;
+}
+@media (min-aspect-ratio: 540/1000) {
+  .LM_content .ctaZone .cta .ctaBtn {
+    top: 2%;
+  }
 }
 @keyframes changeScaleCta {
   0% {
@@ -655,6 +860,11 @@ iframe {
 .LM_content .ctaZone .cta .ctaShadow {
   animation: changeScaleCta 1.5s linear 4.4s forwards;
   top: 2%;
+}
+@media (min-aspect-ratio: 540/1000) {
+  .LM_content .ctaZone .cta .ctaShadow {
+    top: 8%;
+  }
 }
 .LM_content .ctaZone .tSc {
   position: absolute;

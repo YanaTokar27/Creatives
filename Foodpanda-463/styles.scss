@@ -354,26 +354,66 @@ iframe {
 
             .box {
                 .boxChest {
-                    width: 63%;
+                    width: 65%;
                     position: absolute;
-                    top: 12%;
+                    top: 19%;
                     right: 0;
+
+                    @media (min-aspect-ratio: 540 / 1000) {
+                        top: 15%;
+                    }
+
+                    @media (min-aspect-ratio: 540 / 1000) {
+                        top: 14%;
+                    }
+
+                    @media (min-aspect-ratio: 600 / 1000) {
+                        width: 64%;
+                    }
                 }
 
                 .boxCoins {
-                    width: 14%;
+                    width: 17%;
                     position: absolute;
-                    top: 73%;
-                    right: 48%;
+                    top: 69%;
+                    right: 46%;
+
+                    @media (min-aspect-ratio: 510 / 1000) {
+                        width: 15%;
+                        top: 74%;
+                        right: 48%;
+                    }
+
+                    @media (min-aspect-ratio: 510 / 1000) {
+                        top: 79%;
+                        right: 49%;
+                    }
                 }
 
                 .chestSparkle1,
                 .chestSparkle2 {
                     height: 55%;
                     position: absolute;
-                    top: 12%;
-                    right: 2%;
+                    top: 17%;
+                    right: -2%;
                     opacity: 0;
+
+                    @media (min-aspect-ratio: 490 / 1000) {
+                        top: 18%;
+                        right: -1%;
+                    }
+                    @media (min-aspect-ratio: 510 / 1000) {
+                        top: 19%;
+                        right: 2%;
+                    }
+
+                    @media (min-aspect-ratio: 540 / 1000) {
+                        top: 15%;
+                    }
+
+                    @media (min-aspect-ratio: 600 / 1000) {
+                        top: 17%;
+                    }
                 }
 
                 .chestSparkle1 {
@@ -388,8 +428,41 @@ iframe {
                     height: 55%;
                     position: absolute;
                     top: 12%;
-                    right: -1%;
+                    right: -3%;
                     animation: sparkleCoins 5s linear infinite;
+
+                    @media (min-aspect-ratio: 470 / 1000) {
+                        top: 14%;
+                    }
+
+                    @media (min-aspect-ratio: 490 / 1000) {
+                        top: 16%;
+                    }
+
+                    @media (min-aspect-ratio: 510 / 1000) {
+                        top: 17%;
+                    }
+
+                    @media (min-aspect-ratio: 530 / 1000) {
+                        top: 18%;
+                        right: -2%;
+                    }
+
+                    @media (min-aspect-ratio: 540 / 1000) {
+                        top: 15%;
+                    }
+
+                    @media (min-aspect-ratio: 560 / 1000) {
+                        top: 16%;
+                    }
+
+                    @media (min-aspect-ratio: 570 / 1000) {
+                        top: 17%;
+                    }
+
+                    @media (min-aspect-ratio: 600 / 1000) {
+                        top: 19%;
+                    }
                 }
 
                 @keyframes sparkleCoins {
@@ -413,10 +486,14 @@ iframe {
 
             .panda {
                 opacity: 0;
-                top: 9%;
+                top: 16%;
                 position: relative;
                 transform: translateY(-25%);
                 animation: movePanda 2s ease-in-out 1.5s forwards;
+
+                @media (min-aspect-ratio: 540 / 1000) {
+                    top: 13%;
+                }
 
                 @keyframes movePanda {
                     0% {
@@ -439,11 +516,13 @@ iframe {
                 .pandaMouth {
                     top: 11%;
                     position: absolute;
-                    width: 61%;
-                    left: -3%;
+                    width: 64%;
+                    left: -6%;
+
+                    @media (min-aspect-ratio: 540 / 1000) {
+                        width: 62%;
+                    }
                 }
-
-
 
                 .pandaArm {
                     transform: rotate(0);
@@ -556,6 +635,28 @@ iframe {
                     left: -3%;
                     opacity: 0;
                     z-index: 2;
+
+                    @media (min-aspect-ratio: 490 / 1000) {
+                        top: 78%;
+                    }
+
+                    @media (min-aspect-ratio: 520 / 1000) {
+                        top: 80%;
+                    }
+
+                    @media (min-aspect-ratio: 530 / 1000) {
+                        width: 37%;
+                    }
+
+                    @media (min-aspect-ratio: 580 / 1000) {
+                        width: 35%;
+                        top: 82%;
+                    }
+
+                    @media (min-aspect-ratio: 600 / 1000) {
+                        width: 33%;
+                        top: 83%;
+                    }
                 }
                 .grapes {
                     animation: animFruit 1.2s ease-in-out 2s forwards;
@@ -565,7 +666,6 @@ iframe {
                     animation: changeOpacityText 1.5s linear 1.8s forwards;
                 }
 
-
                 .carrot,
                 .carrotShadow {
                     top: 66%;
@@ -573,6 +673,16 @@ iframe {
                     width: 30%;
                     left: 59%;
                     opacity: 0;
+
+                    @media (min-aspect-ratio: 520 / 1000) {
+                        top: 68%;
+                        width: 28%;
+                        left: 57%;
+                    }
+
+                    @media (min-aspect-ratio: 520 / 1000) {
+                        top: 70%;
+                    }
                 }
 
                 .carrot {
@@ -590,6 +700,10 @@ iframe {
                     width: 33%;
                     left: 70%;
                     opacity: 0;
+
+                    @media (min-aspect-ratio: 520 / 1000) {
+                        top: 76%;
+                    }
                 }
 
                 .cabbage {
@@ -609,6 +723,14 @@ iframe {
                     left: 45%;
                     transform-origin: center;
                     opacity: 0;
+
+                    @media (min-aspect-ratio: 520 / 1000) {
+                        top: 79%;
+                    }
+
+                    @media (min-aspect-ratio: 600 / 1000) {
+                        width: 23%;
+                    }
                 }
 
                 .orange {
@@ -618,8 +740,6 @@ iframe {
                 .orangeShadow {
                     animation: changeOpacityText 1.5s linear 2.8s forwards;
                 }
-
-
 
                 .apple {
                     top: 43%;
@@ -641,28 +761,48 @@ iframe {
                             transform: translateY(0);
                         }
                     }
+
+                    @media (min-aspect-ratio: 470 / 1000) {
+                        top: 45%;
+                    }
+
+                    @media (min-aspect-ratio: 500 / 1000) {
+                        top: 46%;
+                        width: 11%;
+                    }
+
+                    @media (min-aspect-ratio: 610 / 1000) {
+                        top: 49%;
+                    }
                 }
 
                 .leafFirst {
                     position: absolute;
-                    bottom: 2%;
+                    bottom: 11%;
                     left: 7%;
                     width: 5%;
                     animation: leafAnimation 3s linear 3.5s forwards;
                     transform: translateY(-3500%);
                     opacity: 0;
+
+                    @media (min-aspect-ratio: 530 / 1000) {
+                        bottom: 8%;
+                    }
                 }
 
                 .leafSecond {
                     position: absolute;
-                    bottom: 2%;
+                    bottom: 13%;
                     left: 7%;
                     width: 5%;
                     animation: leafAnimation 4s linear 4s forwards;
                     opacity: 0;
                     z-index: 1;
-                }
 
+                    @media (min-aspect-ratio: 530 / 1000) {
+                        bottom: 6%;
+                    }
+                }
 
                 @keyframes leafAnimation {
                     0% {
@@ -690,7 +830,6 @@ iframe {
                         transform: translateY(0) rotate(0deg);
                     }
                 }
-
 
                 @keyframes animFruit {
                     0% {
@@ -721,7 +860,6 @@ iframe {
     }
 
     .ctaZone {
-        // border: 2px solid blue;
         height: 10%;
         display: flex;
         flex-direction: column;
@@ -730,14 +868,10 @@ iframe {
         bottom: 1%;
 
         .cta {
-            height: 70%;
+            height: 65%;
             width: 50%;
             position: absolute;
-            // border: 2px solid red;
             position: relative;
-            // opacity: 0;
-            // animation: changeScaleCta 1.5s linear 4.6s forwards;
-
 
             .ctaShadow,
             .ctaBtn,
@@ -756,21 +890,12 @@ iframe {
                 animation: changeOpacityText 2s linear 5s forwards, clickOnCta 9s linear 6s infinite;
             }
 
-            // @keyframes changeOpacityText {
-            //     0% {
-            //         opacity: 0;
-            //     }
-
-            //     30%,
-            //     100% {
-            //         opacity: 1;
-            //     }
-
-            // }
-
             .ctaBtn {
                 animation: changeScaleCta 1.4s linear 4.4s forwards, clickOnCta 9s linear 6s infinite;
-                ;
+
+                @media (min-aspect-ratio: 540 / 1000) {
+                    top: 2%;
+                }
             }
 
 
@@ -801,10 +926,13 @@ iframe {
                 }
             }
 
-
             .ctaShadow {
                 animation: changeScaleCta 1.5s linear 4.4s forwards;
                 top: 2%;
+
+                @media (min-aspect-ratio: 540 / 1000) {
+                    top: 8%;
+                }
             }
 
         }
