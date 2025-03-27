@@ -18,4 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", changeOrientation);
 
   changeOrientation();
+
+  const logoZone = document.querySelector(".logoZone");
+  const bgZone = document.querySelector(".bgZone");
+  const ctaZone = document.querySelector(".ctaZone");
+
+  function clickZone(element, message) {
+    element.addEventListener("click", function () {
+      console.log(message);
+      // window.location.href = "https://sinoptik.ua";
+    });
+  }
+
+  clickZone(logoZone, "logoClick");
+  clickZone(bgZone, "bgClick");
+  clickZone(ctaZone, "ctaClick");
 });
