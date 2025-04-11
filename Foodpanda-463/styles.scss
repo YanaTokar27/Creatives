@@ -22,6 +22,12 @@ iframe {
     height: 100%
  }
 
+ @mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
 .LM_loading_page {
     display: none;
     position: absolute;
@@ -56,16 +62,12 @@ iframe {
     @include fullScreen;
     overflow: hidden;
     background: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex;
 
     .logoZone {
         height: 10%;
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex;
         align-items: center;
 
         .headerShadow {
@@ -104,16 +106,12 @@ iframe {
 
     .bgZone {
         height: 80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex;
         align-items: center;
         position: relative;
 
         .title {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            @include flex;
             align-items: center;
             height: 40%;
             width: 55%;
@@ -820,7 +818,6 @@ iframe {
             height: 65%;
             width: 50%;
             position: absolute;
-            position: relative;
 
             .ctaShadow,
             .ctaBtn,
@@ -900,7 +897,6 @@ iframe {
             70%, 100% {
                 opacity: 1;
             }
-            
         }
     }
 }
