@@ -73,7 +73,6 @@ img {
 }
 
 .LM_landscape {
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -329,4 +328,4 @@ img {
   .LM_content main .leaves-bottom {
     bottom: -8%;
   }
-}
+}/*# sourceMappingURL=styles.css.map */
